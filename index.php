@@ -56,7 +56,7 @@ if (!empty($_POST["logout"])) {
         <div class="container">
             <div class="card card-container">
             <form>
-                <h1>Employer Log in</h1>
+                <h1>Log in</h1>
                     <div class="inset">
                         <p>
                             <label for="email">EMAIL ADDRESS</label>
@@ -72,30 +72,13 @@ if (!empty($_POST["logout"])) {
                         </p>
                     </div>
                  <p class="p-container">
-                        <span>Forgot password ?</span>
+                        <a href="/braintrendy/registration.php" class="forgot-password">
+                        Register!
+                        </a>
                         <input type="submit" name="go" id="go" value="Log in">
                 </p>
         </form>
 
-
-
-
-
-
-
-
-                <!-- <p id="profile-name" class="profile-name-card"></p>
-                <form method = "POST" class="form-signin">
-                    <span id="reauth-email" class="reauth-email"></span>
-                    <input type="email" id="inputEmail" name = "email" class="form-control" placeholder="Email address" required autofocus>
-                    <input type="password" id="inputPassword" name = "password" class="form-control" placeholder="Password" required>
-                    <input class="btn btn-lg btn-primary btn-block btn-signin" type = "submit" name = "login" id = "btn_sub" value = "Login">
-                </form>/form -->
-                <a href="/braintrendy/registration.php" class="forgot-password">
-                    Register!
-                </a>
-            </div><!-- /card-container -->
-        </div><!-- /container -->
         <script
                 src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="myscripts.js"></script>
