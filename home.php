@@ -3,18 +3,26 @@
 <head>
 <title>Title of the document</title>
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        
         <link rel="stylesheet" type="text/css" href="home.css">
+        <link rel="stylesheet" type="text/css" href="navbar.css">
+        <link rel="stylesheet" type="text/css" href="event.css">
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
+<nav>
+   <ul>
+    <li>Link 1</li>
+    <li>Link 2</li>
+    <li>Link 3</li>
+  </ul>
+</nav>
 
 <div class="banner"></div>
+<div id="body">
 <div id="hero-slides">
   <div id="header">
     <div id="logo"></div>
@@ -90,8 +98,10 @@
     <div id="next-catch"></div>
     <div id="prev-catch"></div>
   </div>
-  <div id="footer"><a href="https://dribbble.com/shots/3888265-Motion-Study" target="_blank">
+  <div id="footer"><a href="" target="_blank">
       <div id="dribbble"></div></a></div>
+</div>
+ 
 </div>
 <div class="body-text">
   <div class="wrapper">
@@ -129,7 +139,12 @@
       tilde keytar dreamcatcher stumptown seitan truffaut.</p>
   </div>
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="home.js"></script>
+<script src="eventscroll.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </body>
 
 </html>
