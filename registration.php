@@ -13,17 +13,21 @@ if(array_key_exists("submit", $_POST)){
 
     $hash = password_hash($passwordFromInput, PASSWORD_BCRYPT, $options);
 
+    // Creating Date
+    $dt = new DateTime();
+    $currentTime =  $dt->format('Y-m-d H:i:s');
+
 
     // Adding User to the DataBase in profile table
-    $query = "INSERT INTO profile (firstName, lastName, address, email, phone, role, userName, password, createdAt, updateAt, isDelete) 
-                VALUES ('".mysqli_real_escape_string($link, $_POST['fname'])."', '".mysqli_real_escape_string($link, $_POST['lname'])."', '".mysqli_real_escape_string($link, $_POST['address'])."','".mysqli_real_escape_string($link, $_POST['email'])."', '".mysqli_real_escape_string($link, $_POST['phone'])."', '".mysqli_real_escape_string($link, $_POST['role'])."', '".mysqli_real_escape_string($link, $_POST['userName'])."', '".mysqli_real_escape_string($link, $hash)."', '".mysqli_real_escape_string($link, Now())."', '".mysqli_real_escape_string($link, Now())."','".mysqli_real_escape_string($link, FALSE)."')";
+    $query = "INSERT INTO profile (firstName, lastName, address, email, phone, password) 
+                VALUES ('".mysqli_real_escape_string($link, $_POST['fname'])."', '".mysqli_real_escape_string($link, $_POST['lname'])."', '".mysqli_real_escape_string($link, $_POST['address'])."','".mysqli_real_escape_string($link, $_POST['email'])."', '".mysqli_real_escape_string($link, $_POST['phone'])."', '".mysqli_real_escape_string($link, $hash)."', '".mysqli_real_escape_string($link, FALSE)."')";
 
     // Connects and sends the query to the DataBase and goes to the login page
     mysqli_query($link, $query);
 
     if(isset($_POST['submit'])) {
 
-        header("Location: /braintrendy/index.php");
+        header("Location: /braintrendy");
         exit;
 
     }
@@ -49,11 +53,13 @@ if(array_key_exists("submit", $_POST)){
                 <p id="profile-name" class="profile-name-card"></p>
                 <form method = "POST" class="form-signin">
                     <span id="reauth-email" class="reauth-email"></span>
-                    <input type="text" id="inputEmail" name = "fname" class="form-control" placeholder="First Name" required autofocus>
-                     <input type="text" id="inputEmail" name = "lname" class="form-control" placeholder="Last Name" required autofocus>
-                    <input type="email" id="inputEmail" name = "email" class="form-control" placeholder="Email address" required autofocus>
+                    <input type="text" id="inputProfile" name = "fname" class="form-control" placeholder="First Name" required autofocus>
+                     <input type="text" id="inputProfile" name = "lname" class="form-control" placeholder="Last Name" required autofocus>
+                     <input type="text" id="inputProfile" name = "address" class="form-control" placeholder="Address" required autofocus>
+                    <input type="email" id="inputProfile" name = "email" class="form-control" placeholder="Email address" required autofocus>
+                    <input type="text" id="inputProfile" name = "phone" class="form-control" placeholder="Phone" required autofocus>
                     <input type="password" id="inputPassword" name = "password" class="form-control" placeholder="Password" required>
-                    <input class="btn btn-lg btn-primary btn-block btn-signin" type = "submit" name = "submit" id = "btn_sub" value = "Register">
+                    <input class="btn btn-lg btn-primary btn-block btn-signin" type = "submit" name = "submit" id = "btn_sub" value = "Registeration">
                 </form><!-- /form -->
             </div><!-- /card-container -->
         </div><!-- /container -->
