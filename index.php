@@ -53,31 +53,30 @@ if (!empty($_POST["logout"])) {
     </head>
 
     <body>
-        <div class="container">
-            <div class="card card-container">
-            <form>
-                <h1>Log in</h1>
-                    <div class="inset">
-                        <p>
-                            <label for="email">EMAIL ADDRESS</label>
-                            <input type="text" name="email" id="email">
-                        </p>
-                        <p>
-                            <label for="password">PASSWORD</label>
-                            <input type="password" name="password" id="password">
-                        </p>
-                        <p>
-                            <input type="checkbox" name="remember" id="remember">
-                            <label for="remember">Remember me for 14 days</label>
-                        </p>
-                    </div>
-                 <p class="p-container">
-                        <a href="/braintrendy/registration.php" class="forgot-password">
-                        Register!
-                        </a>
-                        <input type="submit" name="go" id="go" value="Log in">
-                </p>
-        </form>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+            <!-- Tabs Titles -->
+                <h2 class="active"> Sign In </h2>
+                <a class="inactive underlineHover" href="/braintrendy/registration.php" class="forgot-password">REGISTER</a>
+                        
+    <!-- Icon -->
+                <div class="fadeIn first">
+                    <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+                </div>
+
+    <!-- Login Form -->
+                <form>
+                    <input type="text" id="login" class="fadeIn second" name="login" placeholder="email">
+                    <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+                     <input type="submit" class="fadeIn fourth" value="Log In">
+                </form>
+
+    <!-- Remind Passowrd -->
+                <div id="formFooter">
+                        <a class="underlineHover" href="#">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
 
         <script
                 src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
