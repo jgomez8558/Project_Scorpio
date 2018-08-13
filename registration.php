@@ -9,14 +9,18 @@ if(array_key_exists("submit", $_POST)){
         'cost' => 11,
     ];
 
+    // Hashing password
     $passwordFromInput = $_POST['password'];
 
     $hash = password_hash($passwordFromInput, PASSWORD_BCRYPT, $options);
 
+    // Creating Date
+    $dt = new DateTime();
+    $currentTime =  $dt->format('Y-m-d H:i:s');
 
     // Adding User to the DataBase in profile table
     $query = "INSERT INTO profile (firstName, lastName, address, email, phone, role, userName, password, createdAt, updateAt, isDelete) 
-                VALUES ('".mysqli_real_escape_string($link, $_POST['fname'])."', '".mysqli_real_escape_string($link, $_POST['lname'])."', '".mysqli_real_escape_string($link, $_POST['address'])."','".mysqli_real_escape_string($link, $_POST['email'])."', '".mysqli_real_escape_string($link, $_POST['phone'])."', '".mysqli_real_escape_string($link, $_POST['role'])."', '".mysqli_real_escape_string($link, $_POST['userName'])."', '".mysqli_real_escape_string($link, $hash)."', '".mysqli_real_escape_string($link, Now())."', '".mysqli_real_escape_string($link, Now())."','".mysqli_real_escape_string($link, FALSE)."')";
+                VALUES ('".mysqli_real_escape_string($link, $_POST['fname'])."', '".mysqli_real_escape_string($link, $_POST['lname'])."', '".mysqli_real_escape_string($link, $_POST['address'])."','".mysqli_real_escape_string($link, $_POST['email'])."', '".mysqli_real_escape_string($link, $_POST['phone'])."', '".mysqli_real_escape_string($link, $_POST['role'])."', '".mysqli_real_escape_string($link, $_POST['uname'])."', '".mysqli_real_escape_string($link, $hash)."', '".mysqli_real_escape_string($link, $currentTime)."', '".mysqli_real_escape_string($link, $currentTime)."','".mysqli_real_escape_string($link, FALSE)."')";
 
     // Connects and sends the query to the DataBase and goes to the login page
     mysqli_query($link, $query);
@@ -35,7 +39,7 @@ if(array_key_exists("submit", $_POST)){
 <!DOCTYPE html>
 <html> 
 
-    <title>Register</title>
+    <title>Registeration</title>
     <head>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -51,9 +55,14 @@ if(array_key_exists("submit", $_POST)){
                     <span id="reauth-email" class="reauth-email"></span>
                     <input type="text" id="inputEmail" name = "fname" class="form-control" placeholder="First Name" required autofocus>
                      <input type="text" id="inputEmail" name = "lname" class="form-control" placeholder="Last Name" required autofocus>
+                     <input type="text" id="inputEmail" name = "address" class="form-control" placeholder="Address" required autofocus>
                     <input type="email" id="inputEmail" name = "email" class="form-control" placeholder="Email address" required autofocus>
+                    <input type="text" id="inputEmail" name = "phone" class="form-control" placeholder="Phone" required autofocus>
+                    <input type="radio" checked="checked" name="role" value="1">Student<br>
+                    <input type="radio" name="role" value="2">Teacher
+                    <input type="text" id="inputEmail" name = "uname" class="form-control" placeholder="User Name" required autofocus>
                     <input type="password" id="inputPassword" name = "password" class="form-control" placeholder="Password" required>
-                    <input class="btn btn-lg btn-primary btn-block btn-signin" type = "submit" name = "submit" id = "btn_sub" value = "Register">
+                    <input class="btn btn-lg btn-primary btn-block btn-signin" type = "submit" name = "submit" id = "btn_sub" value = "Registeration">
                 </form><!-- /form -->
             </div><!-- /card-container -->
         </div><!-- /container -->
