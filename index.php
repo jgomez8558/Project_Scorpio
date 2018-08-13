@@ -52,49 +52,31 @@ if (!empty($_POST["logout"])) {
     </head>
 
     <body>
-        <div class="container">
-            <div class="card card-container">
-            <form>
-                <h1>Employer Log in</h1>
-                    <div class="inset">
-                        <p>
-                            <label for="email">EMAIL ADDRESS</label>
-                            <input type="text" name="email" id="email">
-                        </p>
-                        <p>
-                            <label for="password">PASSWORD</label>
-                            <input type="password" name="password" id="password">
-                        </p>
-                        <p>
-                            <input type="checkbox" name="remember" id="remember">
-                            <label for="remember">Remember me for 14 days</label>
-                        </p>
-                    </div>
-                 <p class="p-container">
-                        <span>Forgot password ?</span>
-                        <input type="submit" name="go" id="go" value="Log in">
-                </p>
-        </form>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+            <!-- Tabs Titles -->
+                <h2 class="active"> Sign In </h2>
+                <a class="inactive underlineHover" href="/braintrendy/registration.php" class="forgot-password">REGISTER</a>
+                        
+    <!-- Icon -->
+                <div class="fadeIn first">
+                    <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+                </div>
 
+    <!-- Login Form -->
+                <form>
+                    <input type="text" id="login" class="fadeIn second" name="login" placeholder="email">
+                    <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+                     <input type="submit" class="fadeIn fourth" value="Log In">
+                </form>
 
+    <!-- Remind Passowrd -->
+                <div id="formFooter">
+                        <a class="underlineHover" href="#">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
 
-
-
-
-
-
-                <!-- <p id="profile-name" class="profile-name-card"></p>
-                <form method = "POST" class="form-signin">
-                    <span id="reauth-email" class="reauth-email"></span>
-                    <input type="email" id="inputEmail" name = "email" class="form-control" placeholder="Email address" required autofocus>
-                    <input type="password" id="inputPassword" name = "password" class="form-control" placeholder="Password" required>
-                    <input class="btn btn-lg btn-primary btn-block btn-signin" type = "submit" name = "login" id = "btn_sub" value = "Login">
-                </form>/form -->
-                <a href="/braintrendy/registration.php" class="forgot-password">
-                    Register!
-                </a>
-            </div><!-- /card-container -->
-        </div><!-- /container -->
         <script
                 src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="myscripts.js"></script>
