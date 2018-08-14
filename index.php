@@ -23,7 +23,7 @@ if (!empty($_POST["login"])) {
 
     if ($auth === true) {
 
-        $_SESSION['name'] = $row['firstName'];
+        $_SESSION['id'] = $row['userId'];
         //             header("Location: /braintrendy/home.php");
         header("Location: /braintrendy/home.php");
 
