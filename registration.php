@@ -41,8 +41,7 @@ if(array_key_exists("submit", $_POST)){
     <title>Register</title>
     <head>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        
         <link rel="stylesheet" type="text/css" href="registration.css">
     </head>
 
@@ -64,8 +63,10 @@ if(array_key_exists("submit", $_POST)){
                 </form><!-- /form -->
             </div><!-- /card-container -->
         </div><!-- /container -->
-        <script
-                src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="myscripts.js"></script>
     </body>
 
