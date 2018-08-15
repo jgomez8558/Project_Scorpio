@@ -45,6 +45,7 @@ if (!empty($_POST["logout"])) {
 
     <title>Login</title>
     <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">  
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -66,7 +67,7 @@ if (!empty($_POST["logout"])) {
     <!-- Login Form -->
                 <form method = "POST" >
                     <input type="text" id="login" class="fadeIn second" name="email" placeholder="email">
-                    <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
                      <input type="submit" name="login" class="fadeIn fourth" value="Login">
                 </form>
 
