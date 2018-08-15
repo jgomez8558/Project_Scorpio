@@ -67,7 +67,7 @@ if (!empty($_POST["logout"])) {
     <!-- Login Form -->
                 <form method = "POST" >
                     <input type="text" id="login" class="fadeIn second" name="email" placeholder="email">
-                    <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
                      <input type="submit" name="login" class="fadeIn fourth" value="Login">
                 </form>
 
