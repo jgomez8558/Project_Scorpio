@@ -139,6 +139,7 @@ $result = mysqli_query($link, $query);
         </a>
       </div>
     </div>
+    
 
   </div>
   <div class="container-fluid">
