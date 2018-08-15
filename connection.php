@@ -1,7 +1,7 @@
 <?php
 
 
-	$link = mysqli_connect("localhost", "root", "","users");
+	$link = mysqli_connect("localhost", "root", "","Users");
 //(nameOfHost,"userName","passwordOfDatabase","NameofDataBase")
 	if(mysqli_connect_error())
 	{
