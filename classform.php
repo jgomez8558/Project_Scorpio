@@ -22,10 +22,28 @@ include('connection.php');
  <body>
 
   <form>
-  First name:<br>
-  <input type="text" name="firstname"><br>
-  Last name:<br>
-  <input type="text" name="lastname">
+  Email:<br>
+  <input type="text" name="email"><br>
+  Phone Number:<br>
+  <input type="text" name="phoneNumber"><br>
+  Catagory:<br>
+  <select name="cars">
+    <option value="Technology">Technology</option>
+    <option value="Health">Health</option>
+    <option value="Art">Art</option>
+    <option value="Cooking">Cooking</option>
+    <option value="Music">Music</option>
+  </select>
+  <br>
+  Location:<br>
+  <input type="text" name="location"><br>
+  Date:<br>
+  <input type="text" name="date"><br>
+  Description:<br>
+  <textarea name="message" rows="10" cols="30"></textarea>
+  <br>
+  Images:<br>
+  <input type="text" name="images"><br>
 </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
