@@ -19,7 +19,7 @@ include('connection.php');
  <body>
 
 ""
-<div id="form container" class="container">
+<div id="form-container" class="container">
   <div class="card card-container">
     <form id="info">
     Email:<br>
