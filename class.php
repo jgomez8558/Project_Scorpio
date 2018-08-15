@@ -4,6 +4,10 @@ session_start();
 
 include('connection.php');
 
+$query = "SELECT * FROM classes";
+
+$result = mysqli_query($link, $query);
+
 ?>
 
 <!DOCTYPE html>
@@ -18,15 +22,12 @@ include('connection.php');
   <link rel="stylesheet" type="text/css" href="home.css">
   <link rel="stylesheet" type="text/css" href="navbar.css">
   <link rel="stylesheet" type="text/css" href="event.css">
-
+  <link rel="stylesheet" type="text/css" href="footer.css">
 </head>
 
 <body>
-  <nav>
+<nav>
     <ul>
-      <li>
-        <a href="/braintrendy/logout.php">Logout</a>
-      </li>
       <li>
         <a href="/braintrendy/home.php">Home</a>
       </li>
@@ -35,6 +36,9 @@ include('connection.php');
       </li>
       <li>
         <a href="/braintrendy/profile.php">Profile</a>
+      </li>
+      <li>
+        <a href="/braintrendy/logout.php">Logout</a>
       </li>
     </ul>
   </nav>
@@ -135,55 +139,34 @@ include('connection.php');
         </a>
       </div>
     </div>
+    
 
   </div>
   <div class="container-fluid">
 
-  <div class="col">
   <div class="row">
+    <?php 
+    while($row = mysqli_fetch_array($result)){
+      ?>
+  <div class="col">
   
     ` <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="https://secure.i.telegraph.co.uk/multimedia/archive/01358/students_classroom_1358062c.jpg" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">This is a class for learning javascript, html, and css.</p>
-        <p>Professer : Farnsworth</p>
+        <h5 class="card-title"> <?= $row['class']?> </h5>
+        <p class="card-text"><?= $row['description']?></p>
+        <p><?= $row['userId']?></p>
+        <p><?= $row['location']?><p>
+        <p><?= $row['date']?><p>
+        <p><?= $row['category']?><p>
         <a href="classinfo.php" class="btn btn-primary">Classinfo</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://secure.i.telegraph.co.uk/multimedia/archive/01358/students_classroom_1358062c.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">This is a class for learning javascript, html, and css.</p>
-        <p>Professer : Farnsworth</p>
-        <a href="classinfo.php" class="btn btn-primary">Classinfo</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://secure.i.telegraph.co.uk/multimedia/archive/01358/students_classroom_1358062c.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">This is a class for learning javascript, html, and css.</p>
-        <p>Professer : Farnsworth</p>
-        <a href="classinfo.php" class="btn btn-primary">Classinfo</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://secure.i.telegraph.co.uk/multimedia/archive/01358/students_classroom_1358062c.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">This is a class for learning javascript, html, and css.</p>
-        <p>Professer : Farnsworth</p>
-        <a href="classinfo.php" class="btn btn-primary">ClassInfo</a>
       </div>
     </div>
 
   </div>
+    <?php } ?>
  </div>
+
 
  
 </div>
@@ -192,6 +175,65 @@ include('connection.php');
       
     
   </div>
+
+<footer>
+  </footer>
+  <div class="footer">
+    <div id="button"></div>
+  <div id="container">
+  <div id="cont">
+  <div class="footer_center">
+  <div id="arrows">
+  <i class="fas fa-arrow-down"></i>
+  <footer>
+  <div class="centered clearfix">
+    <div class="footer-logo">
+      <img class="logo" src="/braintrendy/assets/logo2.png">
+      
+    </div>
+    <div class="footer-contact">
+       <h3><a href="">Contact</a></h3>
+       <ul class="footer-links">
+          <li><a href="">Page Title 1</a></li>
+          <li><a href="">Page Title 2</a></li>
+          
+        </ul>
+    </div>
+    <div class="footer-navigation">
+      <div class="footer-links-holder">
+        <h3><a href="">Legal Stuff</a></h3>
+        <ul class="footer-links">
+          <li><a href="tos.php">Term Of Services</a></li>
+          <li><a href="pp.php">Privacy Policy</a></li>
+          <li><h6>All Rights Reserved © braintrendy 2018</h6></li>
+        </ul>
+      </div>
+      <div class="footer-links-holder">
+        <h3><a href="">About Us</a></h3>
+        <ul class="footer-links">
+          <li><a href="">Page Title 1</a></li>
+          
+          
+        </ul>
+      </div>
+      <div class="footer-links-holder">
+        <h3><a href="">Social Media</a></h3>
+        <ul class="footer-links">
+          <li><a href=""> </a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+     
+  
+</footer>
+  </div>
+  </div>
+  </div>
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"></script>
