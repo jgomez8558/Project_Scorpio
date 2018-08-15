@@ -24,6 +24,7 @@ if (!empty($_POST["login"])) {
     if ($auth === true) {
 
         $_SESSION['id'] = $row['userId'];
+        $_SESSION['role'] = $row['role'];
         //             header("Location: /braintrendy/home.php");
         header("Location: /braintrendy/home.php");
 
