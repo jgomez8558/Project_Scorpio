@@ -35,7 +35,7 @@ include('connection.php');
               <img src="https://secure.i.telegraph.co.uk/multimedia/archive/01358/students_classroom_1358062c.jpg" alt="Card image cap">
               <p class="card-text">Learn how to use js, html, and css</p>
               <p>Professer: Farnsworth</p>
-              <a href="profile.php" class="btn btn-primary">Sign Up!</a>
+              <a href="classform.php" class="btn btn-primary">Sign Up!</a>
               <a href="class.php" class="btn btn-primary">Return</a>
             
             </div>

@@ -4,6 +4,10 @@ session_start();
 
 include('connection.php');
 
+$query = "SELECT * FROM classes";
+
+$result = mysqli_query($link, $query);
+
 ?>
 
 <!DOCTYPE html>
@@ -139,50 +143,27 @@ include('connection.php');
   </div>
   <div class="container-fluid">
 
-  <div class="col">
   <div class="row">
+    <?php 
+    while($row = mysqli_fetch_array($result)){
+      ?>
+  <div class="col">
   
     ` <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="https://secure.i.telegraph.co.uk/multimedia/archive/01358/students_classroom_1358062c.jpg" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">This is a class for learning javascript, html, and css.</p>
-        <p>Professer : Farnsworth</p>
+        <h5 class="card-title"> <?= $row['class']?> </h5>
+        <p class="card-text"><?= $row['description']?></p>
+        <p><?= $row['userId']?></p>
+        <p><?= $row['location']?><p>
+        <p><?= $row['date']?><p>
+        <p><?= $row['category']?><p>
         <a href="classinfo.php" class="btn btn-primary">Classinfo</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://secure.i.telegraph.co.uk/multimedia/archive/01358/students_classroom_1358062c.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">This is a class for learning javascript, html, and css.</p>
-        <p>Professer : Farnsworth</p>
-        <a href="classinfo.php" class="btn btn-primary">Classinfo</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://secure.i.telegraph.co.uk/multimedia/archive/01358/students_classroom_1358062c.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">This is a class for learning javascript, html, and css.</p>
-        <p>Professer : Farnsworth</p>
-        <a href="classinfo.php" class="btn btn-primary">Classinfo</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://secure.i.telegraph.co.uk/multimedia/archive/01358/students_classroom_1358062c.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">This is a class for learning javascript, html, and css.</p>
-        <p>Professer : Farnsworth</p>
-        <a href="classinfo.php" class="btn btn-primary">ClassInfo</a>
       </div>
     </div>
 
   </div>
+    <?php } ?>
  </div>
 
  
