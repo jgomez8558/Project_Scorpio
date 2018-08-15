@@ -1,48 +1,18 @@
-<?php 
-
-session_start();
-
-include('connection.php');
-
-?>
-
-<!DOCTYPE html>
-
-<html>
-<head>
-  <title>Class</title>
-
- 
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-  <link rel="stylesheet" type="text/css" href="home.css">
-  <link rel="stylesheet" type="text/css" href="navbar.css">
-  <link rel="stylesheet" type="text/css" href="event.css">
-
-</head>
-
-  <body>
-
-  
-
-    <div class="container-fluid">
-        <div class="card text-center">
-            <div class="card-header">
-              
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Javascript, HTML, and CSS</h5>
-              <img src="https://secure.i.telegraph.co.uk/multimedia/archive/01358/students_classroom_1358062c.jpg" alt="Card image cap">
-              <p class="card-text">Learn how to use js, html, and css</p>
-              <p>Professer: Farnsworth</p>
-              <a href="profile.php" class="btn btn-primary">Sign Up!</a>
-              <a href="class.php" class="btn btn-primary">Return</a>
-            
-            </div>
-            <div class="card-footer text-muted">
-              
-            </div>
+<app-navbar></app-navbar>
+<body>
+  <div class="container-fluid">
+      <div class="card text-center">
+          <div class="card-header">
+            Featured
           </div>
-    </div>
-  </body>
-</html>  
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="card-footer text-muted">
+            2 days ago
+          </div>
+        </div>
+  </div>
+</body>
