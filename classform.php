@@ -1,8 +1,31 @@
 <?php 
 
 session_start();
+if(array_key_exists("submit",$_POST)){
 
-include('connection.php');
+  include('connection.php');
+
+  $tempId = (string)$_SESSION['id'];
+
+  $query = "INSERT INTO classes (userId, category, class, location, date, description)
+            VALUES ('".mysqli_real_escape_string($link, $tempId)."',
+                    '".mysqli_real_escape_string($link, $_POST['category'])."',
+                    '".mysqli_real_escape_string($link, $_POST['class'])."',
+                    '".mysqli_real_escape_string($link, $_POST['location'])."',
+                    '".mysqli_real_escape_string($link, $_POST['date'])."',
+                    '".mysqli_real_escape_string($link, $_POST['description'])."')";
+
+        mysqli_query($link, $query);
+
+       
+  if(isset($_POST['submit'])){
+
+    header("Location: /braintrendy/class.php");
+    exit;
+
+  }
+}
+
 
 ?>
 
@@ -21,13 +44,9 @@ include('connection.php');
 ""
 <div id="form-container" class="container">
   <div class="card card-container">
-    <form id="info">
-    Email:<br>
-    <input type="text" name="info-control"><br>
-    Phone Number:<br>
-    <input type="text" name="info-control"><br>
-    Catagory:<br>
-    <select name="options">
+    <form method = "POST">
+    Category:<br>
+    <select name="category">
       <option value="Technology">Technology</option>
       <option value="Health">Health</option>
       <option value="Art">Art</option>
@@ -35,15 +54,16 @@ include('connection.php');
       <option value="Music">Music</option>
     </select>
     <br>
+    Class:<br>
+    <input type="text" name="class"><br>
     Location:<br>
-    <input type="text" name="info-control"><br>
+    <input type="text" name="location"><br>
     Date:<br>
-    <input type="text" name="info-control"><br>
+    <input type="text" name="date"><br>
     Description:<br>
-    <textarea name="info-control" rows="10" cols="30"></textarea>
+    <textarea name="description" rows="10" cols="30"></textarea>
     <br>
-    Images:<br>                  
-    <input type="submit" name="info-control">
+    <input type="submit" name = "submit" value = "classform">
   </form>
 </div>
 
