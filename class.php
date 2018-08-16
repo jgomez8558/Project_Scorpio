@@ -167,7 +167,7 @@ $result = mysqli_query($link, $query);
     <?php } ?>
  </div>
 
-
+<a href="classform.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
  
 </div>
 
