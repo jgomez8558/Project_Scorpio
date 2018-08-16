@@ -70,7 +70,7 @@ if(array_key_exists("submit", $_POST)){
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="inputGroupSelect01">Role</label>
                         </div>
-                        <select class="custom-select" id="inputGroupSelect01">
+                        <select class="custom-select" id="inputGroupSelect01" name="role">
                             <option selected>Choose...</option>
                             <option value="1">Student</option>
                             <option value="2">Teacher</option>
