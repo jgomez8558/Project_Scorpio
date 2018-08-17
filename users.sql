@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 14, 2018 at 11:54 PM
+-- Generation Time: Aug 17, 2018 at 05:14 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -35,18 +35,18 @@ CREATE TABLE `classes` (
   `class` varchar(40) NOT NULL,
   `location` varchar(40) NOT NULL,
   `date` varchar(25) NOT NULL,
-  `description` text NOT NULL,
-  `image` varchar(255) NOT NULL
+  `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `classes`
 --
 
-INSERT INTO `classes` (`classId`, `userId`, `category`, `class`, `location`, `date`, `description`, `image`) VALUES
-(1, 1, 'Technology', 'CISCO', 'CEED', '9/12/18', 'Networking to your heart desire.', '/braintrendy/img/classes/1/logo.png'),
-(2, 1, 'Technology', 'Networking', 'CEED', '10/23/18', 'How to subnet in 3 easy steps', '/braintrendy/img/classes/1/one.png'),
-(3, 2, 'Art', 'How', 'South Texas College', '8/24/18', 'Making wonderful paintings for kids.', '/braintrendy/img/classes/2/two.png');
+INSERT INTO `classes` (`classId`, `userId`, `category`, `class`, `location`, `date`, `description`) VALUES
+(1, 1, 'Technology', 'CISCO', 'CEED', '9/12/18', 'Networking to your heart desire.'),
+(2, 1, 'Technology', 'Networking', 'CEED', '10/23/18', 'How to subnet in 3 easy steps'),
+(3, 2, 'Art', 'How', 'South Texas College', '8/24/18', 'Making wonderful paintings for kids.'),
+(4, 6, 'Cooking', 'Kirby\'s Kitchen', 'STC', '9/16/18', 'How to cook everything into one bowl.');
 
 -- --------------------------------------------------------
 
@@ -73,7 +73,10 @@ INSERT INTO `profile` (`userId`, `firstName`, `lastName`, `address`, `email`, `p
 (1, 'Jon', 'Gomez', 'P.O. BOX 711', 'test86@gmail.com', '5552346789', '2', '$2y$11$Cz4Z8V.spMwE5/Zq7I'),
 (2, 'antonio', 'estrada', 'asdas street', 'antonio@gmail.com', '1234567890', '1', '$2y$11$xjIkRxPanHHZrod76L'),
 (3, 'Gom', 'Joe', 'P.O. BOX 334', 'test777@gmail.com', '5552346789', '2', '$2y$11$bT5PagczAr1WB2KnqwYJwOP4yLVvEhtTPGNGJ3C9DpERJAi0Wek4m'),
-(4, 'Fefnir', 'Gomez', 'palm street', 'feftest@gmail.com', '5552347890', '2', '$2y$11$ViGEsS.ReaZUA95tAHWnte37QITTVG10xrKnRZD2aHSXPpK4XawIK');
+(4, 'Fefnir', 'Gomez', 'palm street', 'feftest@gmail.com', '5552347890', '2', '$2y$11$ViGEsS.ReaZUA95tAHWnte37QITTVG10xrKnRZD2aHSXPpK4XawIK'),
+(5, 'sample', 'sample', 'sample', 'sample@gmail.com', '123456789', '2', '$2y$11$6JM5zY3wsoYBfG.sY2EYVevIn0ll9GoAHr04VvN0M4rr3sFeHy4eW'),
+(6, 'Riru', 'Gomez', 'sample', 'plusplus@gmail.com', '1112345678', '', '$2y$11$2i1lt1efewR3fmxttrs9p.hN2ptq7wTc1t.EF.bSVX6K1ZEJvdfY6'),
+(7, 'Lena', 'Gomez', '12345 street', 'test86@gmail.com', '5551235678', '2', '$2y$11$t8wKwkJo1IQ0yI8X4Y7H/utU9Eh0LX3pv2gK4Z2wyvQBTaRUl4TTu');
 
 -- --------------------------------------------------------
 
@@ -137,7 +140,8 @@ ALTER TABLE `profile`
 --
 ALTER TABLE `register`
   ADD PRIMARY KEY (`registerId`),
-  ADD KEY `classId` (`classId`);
+  ADD KEY `classId` (`classId`),
+  ADD KEY `userId` (`userId`);
 
 --
 -- Indexes for table `subscribers`
@@ -153,13 +157,13 @@ ALTER TABLE `subscribers`
 -- AUTO_INCREMENT for table `classes`
 --
 ALTER TABLE `classes`
-  MODIFY `classId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `classId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `register`
@@ -172,22 +176,6 @@ ALTER TABLE `register`
 --
 ALTER TABLE `subscribers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `classes`
---
-ALTER TABLE `classes`
-  ADD CONSTRAINT `classes_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `profile` (`userId`);
-
---
--- Constraints for table `register`
---
-ALTER TABLE `register`
-  ADD CONSTRAINT `register_ibfk_1` FOREIGN KEY (`classId`) REFERENCES `classes` (`classId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
