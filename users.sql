@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 16, 2018 at 10:18 PM
+-- Generation Time: Aug 17, 2018 at 05:08 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -25,26 +25,38 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `register`
+-- Table structure for table `classes`
 --
 
-CREATE TABLE `register` (
-  `registerId` int(11) NOT NULL,
+CREATE TABLE `classes` (
   `classId` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
-  `date` varchar(25) NOT NULL
+  `category` varchar(40) NOT NULL,
+  `class` varchar(40) NOT NULL,
+  `location` varchar(40) NOT NULL,
+  `date` varchar(25) NOT NULL,
+  `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `classes`
+--
+
+INSERT INTO `classes` (`classId`, `userId`, `category`, `class`, `location`, `date`, `description`) VALUES
+(1, 1, 'Technology', 'CISCO', 'CEED', '9/12/18', 'Networking to your heart desire.'),
+(2, 1, 'Technology', 'Networking', 'CEED', '10/23/18', 'How to subnet in 3 easy steps'),
+(3, 2, 'Art', 'How', 'South Texas College', '8/24/18', 'Making wonderful paintings for kids.'),
+(4, 6, 'Cooking', 'Kirby\'s Kitchen', 'STC', '9/16/18', 'How to cook everything into one bowl.');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `register`
+-- Indexes for table `classes`
 --
-ALTER TABLE `register`
-  ADD PRIMARY KEY (`registerId`),
-  ADD KEY `classId` (`classId`),
+ALTER TABLE `classes`
+  ADD PRIMARY KEY (`classId`),
   ADD KEY `userId` (`userId`);
 
 --
@@ -52,21 +64,10 @@ ALTER TABLE `register`
 --
 
 --
--- AUTO_INCREMENT for table `register`
+-- AUTO_INCREMENT for table `classes`
 --
-ALTER TABLE `register`
-  MODIFY `registerId` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `register`
---
-ALTER TABLE `register`
-  ADD CONSTRAINT `register_ibfk_1` FOREIGN KEY (`classId`) REFERENCES `classes` (`classId`),
-  ADD CONSTRAINT `register_ibfk_2` FOREIGN KEY (`userId`) REFERENCES `profile` (`userId`);
+ALTER TABLE `classes`
+  MODIFY `classId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
