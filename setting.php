@@ -32,30 +32,35 @@ $result = mysqli_query($link, $query) or die (mysql_error());
         </div>
       </div>
       <div class="row mb-5">
-        <div class="col-lg-4 col-md-4 col-sm-12 p-0">
+        <div class="col-lg-4 col-md-4 col-sm-12 p-0 mx-auto">
           <div class="card about">
             <div class="card-body">
               <form>
                 <div class="row">
                   <div class="col">
+                    <h6>First Name:</h6>
                     <input type="text" class="form-control" placeholder=<?=$row['firstName']?>>
                   </div>
                   <div class="col">
+                  <h6>Last Name:</h6>
                     <input type="text" class="form-control" placeholder=<?=$row['lastName']?>>
                   </div>
                 </div>
                 <div class="row mt-2">
                   <div class="col">
+                  <h6>Address:</h6>
                     <input type="text" class="form-control" placeholder=<?=$row['address']?>>
                   </div>
                 </div>
                 <div class="row mt-2">
                   <div class="col">
+                    <h6>Phone Number:</h6>
                     <input type="text" class="form-control" placeholder=<?=$row['phone']?>>
                   </div>
                 </div>
                 <div class="row mt-2">
                   <div class="col">
+                  <h6>E-mail:</h6>
                     <input type="text" class="form-control" placeholder=<?=$row['email']?>>
                   </div>
                 </div>
@@ -66,7 +71,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
           <button type="button" class="btn btn-primary mt-3 save">Save</button>
         </div>
         <?php } ?>
-        <div class="col-lg-7 col-md-7 col-sm-12 p-0 m-auto">
+        <div class="col-lg-8 col-md-8 col-sm-12 p-0 m-auto">
           <div class="card classes">
             <div class="card-body">
               <h5 class="card-title">Classes</h5>
@@ -83,11 +88,12 @@ $result = mysqli_query($link, $query) or die (mysql_error());
                 <p class="card-text"><?=$row['location']?></p>
                 <h6 class="card-subtitle mb-2 text-muted"><?=$row['date']?></h6>
                 <p class="card-text"><?=$row['description']?></p>
-                <button type="button" class="btn btn-primary">Edit</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <a href="edit.php?classId=<?=$row['classId'];?>"> <button type="button" class="btn btn-primary">Edit</button> </a>
+                <a href="delete.php?classId=<?=$row['classId'];?>"> <button type="button" class="btn btn-danger">Delete</button> </a>
               </div>
             </div>
               <?php } ?>
+              <button type="button" class="btn btn-success"><i class="fas fa-plus"></i></button>
           </div>
         </div>
       </div>
