@@ -4,6 +4,14 @@ session_start();
 
 include('connection.php');
 
+$classId = $_REQUEST['classId'];
+$query = "SELECT * FROM classes WHERE classId = '".$classId."'";
+
+$result = mysqli_query($link, $query) or die ( mysql_error());
+
+$row = mysqli_fetch_array($result);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -26,16 +34,18 @@ include('connection.php');
   
 
     <div class="container-fluid">
+    
         <div class="card text-center">
             <div class="card-header">
-              
             </div>
             <div class="card-body">
-              <h5 class="card-title">Javascript, HTML, and CSS</h5>
-              <img src="https://secure.i.telegraph.co.uk/multimedia/archive/01358/students_classroom_1358062c.jpg" alt="Card image cap">
-              <p class="card-text">Learn how to use js, html, and css</p>
-              <p>Professer: Farnsworth</p>
-              <a href="classform.php" class="btn btn-primary">Sign Up!</a>
+              <h5 class="card-title"><?= $row['class']?></h5>
+              <img class="logo" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg">
+              <p class="card-text"><?= $row['description']?></p>
+              <p><?= $row['location']?></p>
+              <p><?= $row['date']?></p>
+              <p><?= $row['category']?></p>
+              <a href=".php" class="btn btn-primary">Sign Up!</a>
               <a href="class.php" class="btn btn-primary">Return</a>
             
             </div>
@@ -46,3 +56,4 @@ include('connection.php');
          
   </div>
 </body>
+</html>

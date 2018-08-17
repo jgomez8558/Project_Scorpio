@@ -64,7 +64,7 @@ $result = mysqli_query($link, $query);
         <p><?= $row['location']?></p>
         <p><?= $row['date']?></p>
         <p><?= $row['category']?></p>
-        <a href="classinfo.php" class="btn btn-primary">Classinfo</a>
+        <a href="classinfo.php?classId=<?= $row['classId'];?>"  class="btn btn-primary">Classinfo</a>
       </div>
     </div>
   </div>
