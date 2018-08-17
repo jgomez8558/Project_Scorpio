@@ -20,7 +20,7 @@ $result = mysqli_query($link, $query);
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <link rel="stylesheet" type="text/css" href="home.css">
-  <link rel="stylesheet" type="text/css" href="navbar.css">
+  <link rel="stylesheet" type="text/css" href="fontcolor.css">
   <link rel="stylesheet" type="text/css" href="footer.css">
 </head>
 
@@ -46,41 +46,40 @@ $result = mysqli_query($link, $query);
   <div id="body">
    
     
+  <div class="container-fluid mt-5">
 
-  </div>
-  <div class="container-fluid">
 
-  <div class="row">
+
+
+ <div class="row">
     <?php 
     while($row = mysqli_fetch_array($result)){
       ?>
   <div class="col">
-  
-     <div class="card" style="width: 18rem;">
-    <img class="logo" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg"><alt="Card image cap">
+    <div class="card">
+    <img class="logo" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg">
       <div class="card-body">
-        <h5 class="card-title"> <?= $row['class']?> </h5>
-        <p class="card-text"><?= $row['description']?></p>
-        <p><?= $row['location']?><p>
-        <p><?= $row['date']?><p>
-        <p><?= $row['category']?><p>
+      <h5 class="card-title"> <?= $row['class']?></h5>
+      <p class="card-text"><?= $row['description']?></p>
+        <p><?= $row['location']?></p>
+        <p><?= $row['date']?></p>
+        <p><?= $row['category']?></p>
         <a href="classinfo.php" class="btn btn-primary">Classinfo</a>
       </div>
     </div>
-
   </div>
-    <?php } ?>
- </div>
 
-<a href="classform.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
- 
-</div>
 
 </div>
-      
+<?php } ?>
     
   </div>
+</div>
 
+
+
+
+  
 <footer>
   </footer>
   <div class="footer">
