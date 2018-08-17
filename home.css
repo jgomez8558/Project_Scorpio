@@ -17,11 +17,11 @@
   min-height: 100vh;
   }
   
-  .body-text {
+  /* .body-text {
   position: relative;
   z-index: 10;
   padding-top: 7rem;
-  }
+  } */
   /* h1 {
     font-family: sans-serif;
     letter-spacing: 0.1rem;
@@ -29,7 +29,7 @@
     padding-top: 2rem;
   } */
   
-  p {
+  #p {
     font-size: 1.2rem;
     font-family: sans-serif;
     color: #777;
