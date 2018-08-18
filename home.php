@@ -4,6 +4,17 @@ session_start();
 
 include('connection.php');
 
+//$temp = $_SESSION["userId"];
+
+//$query = "SELECT * FROM profile WHERE userId=$temp";
+
+//if ($row['userId'] == isEmpty){
+
+    //header("Location: /braintrendy");
+    //exit;
+//}
+
+
 $query = "SELECT * FROM classes ORDER BY date DESC LIMIT 5";
 
 $result = mysqli_query($link, $query);
