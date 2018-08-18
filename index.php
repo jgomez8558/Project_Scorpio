@@ -2,29 +2,35 @@
 
 session_start();
 
+// Connects to Database
 include("connection.php");
 
+// Create a message variable to be use in many sections
 $message = "";
 
+// Getting information from the form
 if (!empty($_POST["login"])) {
 
-
+    // Getting password from database
     $hashedPasswordFromDB = mysqli_query($link, "SELECT password FROM profile WHERE email='" . $_POST["email"] . "'");
 
+    // Putting the hash password into a variable
     $pass = mysqli_fetch_row($hashedPasswordFromDB);
 
     $passwordString = $pass[0];
 
+    // Gets information to compare email with password from the Database
     $result = mysqli_query($link, "SELECT * FROM profile WHERE email='" . $_POST["email"] . "' and password = '" . $passwordString . "'");
     $row = mysqli_fetch_array($result);
-    //        if(is_array($row)) {
+    // if(is_array($row)) 
 
     $auth = password_verify($_POST['password'], $passwordString);
 
+    // Logs in if pass all checks else a error message
     if ($auth === true) {
 
         $_SESSION['id'] = $row['userId'];
-        //             header("Location: /braintrendy/home.php");
+        // header("Location: /braintrendy/home.php");
         header("Location: /braintrendy/home.php");
 
     } else {
@@ -34,7 +40,7 @@ if (!empty($_POST["login"])) {
 }
 
 if (!empty($_POST["logout"])) {
-    $_SESSION["ID"] = "";
+    $_SESSION["id"] = "";
     session_destroy();
 }
 
