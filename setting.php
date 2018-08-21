@@ -65,16 +65,16 @@ $result = mysqli_query($link, $query) or die (mysql_error());
                   </div>
                 </div>
               </form>
+              <?php } ?>
             </div>
           </div>
           <a href="profile.php"> <button type="button" class="btn btn-primary mt-3 cancel">Cancel</button> </a>
           <button type="button" class="btn btn-primary mt-3 save">Save</button>
         </div>
-        <?php } ?>
         <div class="col-lg-8 col-md-8 col-sm-12 p-0 m-auto">
           <div class="card classes">
             <div class="card-body">
-              <h5 class="card-title">Classes</h5>
+              <h5 class="card-title mb-1">Classes</h5>
             </div>
             <?php
               $query = "SELECT * FROM classes WHERE userId= $tempId ";
@@ -100,5 +100,3 @@ $result = mysqli_query($link, $query) or die (mysql_error());
     </div>
   </body>
 </html>
-
-
