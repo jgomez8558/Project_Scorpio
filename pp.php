@@ -1,8 +1,11 @@
 <?php 
 
-session_start();
+// Checks if user is login correctly
+include('authlogin.php');
 
+// Connects to Database
 include('connection.php');
+
 ?>
 
 <!DOCTYPE html>
