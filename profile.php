@@ -46,6 +46,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
           <img src="https://dz2cdn4.dzone.com/storage/rc-covers/8757499-recardheader90.png" id="background">
           <img src="https://img.deusm.com/darkreading/DR-user.jpg" id="user">
           <h2 class="name"> <?=$row['firstName']?> <?=$row['lastName']?> </h2>
+          <a href="setting.php"> <button type="button" class="btn btn-primary float-right clearfix mt-3 mr-5">Edit</button> </a>
         </div>
       </div>
       <div class="row mb-5">
@@ -56,7 +57,6 @@ $result = mysqli_query($link, $query) or die (mysql_error());
               <p><?=$row['address']?></p>
               <p><?=$row['phone']?></p>
               <p><?=$row['email']?></p>
-              <a href="setting.php"> <button type="button" class="btn btn-primary">Edit</button> </a>
             </div>
           </div>
         </div>
