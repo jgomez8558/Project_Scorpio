@@ -39,6 +39,9 @@ $result = mysqli_query($link, $query);
       <li>
         <a href="/braintrendy/logout.php">Logout</a>
       </li>
+      <li>
+      <a href="/braintrendy/classform.php">Create a Class</a>
+      </li>
     </ul>
   </nav>
 
@@ -48,22 +51,19 @@ $result = mysqli_query($link, $query);
     
   <div class="container-fluid mt-5">
 
-
-
-
  <div class="row">
-    <?php 
+  <div class="col">
+  <?php 
     while($row = mysqli_fetch_array($result)){
       ?>
-  <div class="col">
     <div class="card">
-    <img class="logo" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg">
       <div class="card-body">
-      <h5 class="card-title"> <?= $row['class']?></h5>
-      <p class="card-text"><?= $row['description']?></p>
-        <p><?= $row['location']?></p>
-        <p><?= $row['date']?></p>
-        <p><?= $row['category']?></p>
+      <img id="classimg" class="logo" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg">
+      <h5 class="card-title">Class: <br> <?= $row['class']?></h5>
+      <p class="card-text">Description: <br> <?= $row['description']?></p>
+        <p>Location: <br> <?= $row['location']?></p>
+        <p>Date: <br> <?= $row['date']?></p>
+        <p>Category: <br> <?= $row['category']?></p>
         <a href="classinfo.php?classId=<?= $row['classId'];?>"  class="btn btn-primary">Classinfo</a>
       </div>
     </div>

@@ -1,15 +1,14 @@
 <?php 
 
-// Checks if user is login correctly
-include('authlogin.php');
+session_start();
 
-// Connects to Database
 include('connection.php');
 
-// Gets list to display the latest classes
 $query = "SELECT * FROM classes ORDER BY date DESC LIMIT 5";
 
 $result = mysqli_query($link, $query);
+
+
 
 ?>
 
@@ -65,7 +64,6 @@ $result = mysqli_query($link, $query);
         <div class="button" id="prev"></div>
         <div id="slides">
           <?php
-            // Displays the 5 latest classes
             while($row = mysqli_fetch_array($result)){
           ?>
             <div class="slide" style="background-image: url(https://alca.tv/static/u/ef5af971-fc46-4ee1-a589-980346478696_opt.png);">

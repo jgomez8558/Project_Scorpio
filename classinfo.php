@@ -45,7 +45,7 @@ $row = mysqli_fetch_array($result);
               <p><?= $row['location']?></p>
               <p><?= $row['date']?></p>
               <p><?= $row['category']?></p>
-              <a href=".php" class="btn btn-primary">Sign Up!</a>
+              <a href="signup.php" class="btn btn-primary">Sign Up!</a>
               <a href="class.php" class="btn btn-primary">Return</a>
             
             </div>
