@@ -31,8 +31,8 @@ $row = mysqli_fetch_array($result);
             $description=$_REQUEST['description'];
             $update="UPDATE classes set class='".$name."', category='".$category."', location='".$location."', date='".$date."', description='".$description."' where classId='".$id."'";
             mysqli_query($link, $update) or die (mysql_error());
-            $status = "Data Updated. </br></br><a href='setting.php'>View Data</a>";
-            echo '<p style="color:#FF0000;"'.$status.'</p>';
+            $status = "Data Updated. </br></br><a href='setting.php'></a>";
+            echo '<p'.$status.'</p>';
             header("Location: setting.php");
             }else{
             ?>
