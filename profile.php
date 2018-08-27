@@ -1,5 +1,7 @@
 <?php
-session_start();
+// Checks if user is login correctly
+include('authlogin.php');
+
 include('connection.php');
 
 $tempId = (string)$_SESSION['id'];
@@ -16,8 +18,6 @@ $result = mysqli_query($link, $query) or die (mysql_error());
     <link rel="stylesheet" href="profile.css"/>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="dots.css">
-    <link rel="stylesheet" type="text/css" href="https://codepen.io/MAW/pen/XVRpEE">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   </head>
   <body>
@@ -37,7 +37,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
         </li>
       </ul>
     </nav>
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 color">
       <div class="row">
       <?php
       while($row = mysqli_fetch_assoc($result)){
@@ -46,6 +46,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
           <img src="https://dz2cdn4.dzone.com/storage/rc-covers/8757499-recardheader90.png" id="background">
           <img src="https://img.deusm.com/darkreading/DR-user.jpg" id="user">
           <h2 class="name"> <?=$row['firstName']?> <?=$row['lastName']?> </h2>
+          <a href="setting.php"> <button type="button" class="btn btn-primary float-right clearfix mt-3 mr-5">Edit</button> </a>
         </div>
       </div>
       <div class="row mb-5">
@@ -53,10 +54,9 @@ $result = mysqli_query($link, $query) or die (mysql_error());
           <div class="card about">
             <div class="card-body">
               <h4 class="card-title">About <?=$row['firstName']?> <?=$row['lastName']?></h4>
-              <p><?=$row['address']?></p>
-              <p><?=$row['phone']?></p>
-              <p><?=$row['email']?></p>
-              <a href="setting.php"> <button type="button" class="btn btn-primary">Edit</button> </a>
+              <p>Address: <?=$row['address']?></p>
+              <p>Phone: <?=$row['phone']?></p>
+              <p>Email: <?=$row['email']?></p>
             </div>
           </div>
         </div>
@@ -136,7 +136,6 @@ $result = mysqli_query($link, $query) or die (mysql_error());
     </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <script src="home.js"></script>
-    <script src="dots.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
   </body>
 </html>
