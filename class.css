@@ -1,6 +1,5 @@
 body {
-  font-family: "Poppins", sans-serif;
-  background-image: url(/braintrendy/assets/background.png);
+  background-image: url("https://www.walldevil.com/wallpapers/w05/colorful-colorful-colorful-colorful-cubes-red-blue-purple-yellow-green-geometry-mazes.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -8,23 +7,39 @@ body {
     min-width: 1024px;
     width: 100%;
     height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: sticky;
+    
+    
 }
 
 
 
 html {
   background-color: #fefefe;
-  box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 500;
 }
 
-#card-body{
-  margin-bottom: 10px;
+.container {
+  margin-top: 40px !important; 
+
 }
 
+.card-body{
+  height: 225px;
+  text-align: center;
+  font-weight: 250;  
+   
+}
+
+nav {
+  font-size: 20px;
+}
+
+.btn {
+
+  float: right;
+
+}
 
