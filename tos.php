@@ -16,30 +16,26 @@ include('connection.php');
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-
-  <link rel="stylesheet" type="text/css" href="home.css">
-  <link rel="stylesheet" type="text/css" href="navbar.css">
-  <link rel="stylesheet" type="text/css" href="event.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+ 
+  <link rel="stylesheet" type="text/css" href="iconnav.css">
+  
 
 </head>
 
-<body>
-  <nav>
-    <ul>
-      <li>
-        <a href="/braintrendy/logout.php">Logout</a>
-      </li>
-      <li>
-        <a href="/braintrendy/class.php">Classes</a>
-      </li>
-      <li>
-        <a href="/braintrendy/profile.php">Profile</a>
-      </li>
-    </ul>
-  </nav>
+ 
 
-<div class="body-text">
-    <div class="wrapper">
+<body>
+<div class="icon-bar">
+  <a href="/braintrendy/home.php" class="home"><i class="fas fa-home"></i></a> 
+  <a href="/braintrendy/class.php" class="classes"><i class="fas fa-graduation-cap"></i></a> 
+  <a href="/braintrendy/profile.php" class="profile"><i class="fas fa-user-circle"></i></a>
+  <a href="/braintrendy/logout.php" class="logout"><i class="fas fa-sign-out-alt"></i></a> 
+</div>
+
+
+
+<div class="content">
       <h1>Terms Of Services</h1>
       <p>TERMS OF SERVICE
 
@@ -239,24 +235,14 @@ Questions about the Terms of Service should be sent to us at riversocesare@yahoo
 </p>
 
     
-    </div>
+    
   </div>
 
 
 
 
 
-  </footer>
-  <div class="footer">
-    <div id="button"></div>
-  <div id="container">
-  <div id="cont">
-  <div class="footer_center">
-      
-  </div>
-  </div>
-  </div>
-  </div>
+  
 
 
 
