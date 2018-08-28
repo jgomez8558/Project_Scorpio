@@ -1,8 +1,11 @@
 <?php 
 
-session_start();
+// Checks if user is login correctly
+include('authlogin.php');
 
+// Connects to Database
 include('connection.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -13,31 +16,26 @@ include('connection.php');
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+ 
+  <link rel="stylesheet" type="text/css" href="iconnav.css">
+  
 
-  <link rel="stylesheet" type="text/css" href="home.css">
-  <link rel="stylesheet" type="text/css" href="navbar.css">
-  <link rel="stylesheet" type="text/css" href="event.css">
-  <link rel="stylesheet" type="text/css" href="footer.css">
 </head>
 
-<body>
-  <nav>
-    <ul>
-      <li>
-        <a href="/braintrendy/logout.php">Logout</a>
-      </li>
-      <li>
-        <a href="/braintrendy/class.php">Classes</a>
-      </li>
-      <li>
-        <a href="/braintrendy/profile.php">Profile</a>
-      </li>
-    </ul>
-  </nav>
-
-<div class="body-text">
-    <div class="wrapper">
  
+
+<body>
+<div class="icon-bar">
+  <a href="/braintrendy/home.php" class="home"><i class="fas fa-home"></i></a> 
+  <a href="/braintrendy/class.php" class="classes"><i class="fas fa-graduation-cap"></i></a> 
+  <a href="/braintrendy/profile.php" class="profile"><i class="fas fa-user-circle"></i></a>
+  <a href="/braintrendy/logout.php" class="logout"><i class="fas fa-sign-out-alt"></i></a> 
+</div>
+
+
+
+<div class="content">
       
 
 
@@ -128,63 +126,7 @@ CONTACT US
 For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at riversocesare@yahoo.com or by mail using the details provided below:
 
   mission, TX, 78572, United States</p>
-  <footer>
-  </footer>
-  <div class="footer">
-    <div id="button"></div>
-  <div id="container">
-  <div id="cont">
-  <div class="footer_center">
-  <div id="arrows">
-  <i class="fas fa-arrow-down"></i>
-  <footer>
-  <div class="centered clearfix">
-    <div class="footer-logo">
-      <img class="logo" src="/braintrendy/assets/logo2.png">
-      
-    </div>
-    <div class="footer-contact">
-       <h3><a href="">Contact</a></h3>
-       <ul class="footer-links">
-          <li><a href="">Page Title 1</a></li>
-          <li><a href="">Page Title 2</a></li>
-          
-        </ul>
-    </div>
-    <div class="footer-navigation">
-      <div class="footer-links-holder">
-        <h3><a href="">Legal Stuff</a></h3>
-        <ul class="footer-links">
-          <li><a href="tos.php">Term Of Services</a></li>
-          <li><a href="pp.php">Privacy Policy</a></li>
-          <li><h6>All Rights Reserved © braintrendy 2018</h6></li>
-        </ul>
-      </div>
-      <div class="footer-links-holder">
-        <h3><a href="">About Us</a></h3>
-        <ul class="footer-links">
-          <li><a href="">Page Title 1</a></li>
-          
-          
-        </ul>
-      </div>
-      <div class="footer-links-holder">
-        <h3><a href="">Social Media</a></h3>
-        <ul class="footer-links">
-          <li><a href=""> </a></li>
-          
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-     
-  
-</footer>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
