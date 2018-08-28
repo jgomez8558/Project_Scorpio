@@ -35,14 +35,14 @@ if(array_key_exists("submit",$_POST)){
  <head>
     <title>Class</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+  <link rel="stylesheet" type="text/css" href="classform.css">
  </head>
 
 
  <body>
 
-""
-<div id="form-container" class="container">
+
+<div class="container">
   <div class="card card-container">
     <form method = "POST">
     Category:<br>
@@ -52,6 +52,7 @@ if(array_key_exists("submit",$_POST)){
       <option value="Art">Art</option>
       <option value="Cooking">Cooking</option>
       <option value="Music">Music</option>
+      <option value="Music">Miscellanious</option>
     </select>
     <br>
     Class:<br>
@@ -62,8 +63,10 @@ if(array_key_exists("submit",$_POST)){
     <input type="text" name="date"><br>
     Description:<br>
     <textarea name="description" rows="10" cols="30"></textarea><br>
-    <input type="submit" name = "submit" value = "classform">
+    <input type="submit" name = "submit" value = "submit">
+    <a href="class.php"  class="btn btn-primary">Return to class</a>
   </form>
+ 
 </div>
 
 
