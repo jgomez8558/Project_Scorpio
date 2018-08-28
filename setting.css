@@ -8,12 +8,12 @@
     border: 2px solid black;
     border-radius: 50%;
     top: 115px;
-    left: 80px;
+    left: 30px;
     width: 125px;
     height: 125px;
 }
 .name {
-    padding-left: 200px;
+    padding-left: 150px;
     padding-top: 10px;
 }
 .classes {
