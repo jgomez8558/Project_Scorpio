@@ -62,7 +62,7 @@ if(array_key_exists("submit", $_POST)){
 
                     <input type="text" id="inputProfile" name = "address" class="fadeIn second"placeholder="Address" required autofocus>
 
-                    <input type="email" id="login" name = "email" class="fadeIn second" name="email" placeholder="email">
+                    <input type="text" id="login" name = "email" class="fadeIn second" name="email" placeholder="email">
 
                     <input type="text" id="inputProfile" name = "phone" class="fadeIn second" placeholder="Phone" required autofocus><br><br>
 

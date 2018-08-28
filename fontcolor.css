@@ -24,9 +24,9 @@ nav {
   }
   
     a {
-      color: rgb(238, 241, 6);
+      color: rgb(170, 88, 88);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
     }

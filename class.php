@@ -19,7 +19,7 @@ $result = mysqli_query($link, $query);
  
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  <link rel="stylesheet" type="text/css" href="home.css">
+  <link rel="stylesheet" type="text/css" href="class.css">
   <link rel="stylesheet" type="text/css" href="fontcolor.css">
   <link rel="stylesheet" type="text/css" href="footer.css">
 </head>
@@ -39,6 +39,9 @@ $result = mysqli_query($link, $query);
       <li>
         <a href="/braintrendy/logout.php">Logout</a>
       </li>
+      <li>
+      <a href="/braintrendy/classform.php">Create a Class</a>
+      </li>
     </ul>
   </nav>
 
@@ -46,33 +49,29 @@ $result = mysqli_query($link, $query);
   <div id="body">
    
     
-  <div class="container-fluid mt-5">
+  
 
-
-
-
- <div class="row">
-    <?php 
+<div class="container">
+	<div class="row" style="direction:ltl;">
+  <?php 
     while($row = mysqli_fetch_array($result)){
       ?>
-  <div class="col">
-    <div class="card">
-    <img class="logo" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg">
-      <div class="card-body">
-      <h5 class="card-title"> <?= $row['class']?></h5>
-      <p class="card-text"><?= $row['description']?></p>
-        <p><?= $row['location']?></p>
-        <p><?= $row['date']?></p>
-        <p><?= $row['category']?></p>
-        <a href="classinfo.php" class="btn btn-primary">Classinfo</a>
-      </div>
+		<div class="card border-primary mb-2 w-100 mb-1">
+            <div class="row">
+            <div class="col-md-3">
+            <img id="classimg" style="max-height: 225px" class="logo" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg">
+            </div>
+            <div class="card-body text-center col-md-9">
+            <h5 class="card-title">Class:  <?= $row['class']?></h5>
+                <p class="card-text">Description:  <?= $row['description']?></p>
+                <p>Location:  <?= $row['location']?></p>
+                <p>Date:  <?= $row['date']?></p>
+                <p>Category:  <?= $row['category']?></p>
+                <a href="classinfo.php?classId=<?= $row['classId'];?>" class="btn btn-primary">Classinfo</a>
+            </div><!--.row-->
+            </div>
     </div>
-  </div>
-
-
-</div>
-<?php } ?>
-    
+    <?php } ?>
   </div>
 </div>
 
@@ -129,6 +128,7 @@ $result = mysqli_query($link, $query);
       </div>
     </div>
   </div>
+  
   
      
   
