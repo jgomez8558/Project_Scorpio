@@ -73,6 +73,6 @@ menu.addEventListener('click', demo);
 
 sleep(100).then(demo);
 
-// window.addEventListener('resize', () => {
-	// console.log(document.body.style.getPropertyValue('--slide-per-page'));
-// });
+window.addEventListener('resize', () => {
+	console.log(document.body.style.getPropertyValue('--slide-per-page'));
+});
