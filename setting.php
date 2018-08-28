@@ -1,7 +1,5 @@
 <?php
-// Checks if user is login correctly
 include('authlogin.php');
-
 include('connection.php');
 
 $tempId = (string)$_SESSION['id'];
@@ -93,7 +91,7 @@ $row = mysqli_fetch_array($result);
               </div>
             </div>
             <?php } ?>
-            
+            <button type="button" class="btn btn-success">+</button>
           </div>
         </div>
       </div>

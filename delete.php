@@ -1,7 +1,5 @@
 <?php
-// Checks if user is login correctly
 include('authlogin.php');
-
 include('connection.php');
 
 $tempId = (string)$_SESSION['id'];

@@ -1,15 +1,14 @@
 <?php 
 
-// Checks if user is login correctly
 include('authlogin.php');
 
-// Connects to Database
 include('connection.php');
 
-// Gets list to display the latest classes
 $query = "SELECT * FROM classes ORDER BY date DESC LIMIT 5";
 
 $result = mysqli_query($link, $query);
+
+
 
 ?>
 
@@ -18,7 +17,7 @@ $result = mysqli_query($link, $query);
 
 <head>
   <title>Home</title>
-
+  <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -27,6 +26,7 @@ $result = mysqli_query($link, $query);
   <link rel="stylesheet" type="text/css" href="event.css">
   <link rel="stylesheet" type="text/css" href="footer.css">
   <link rel="stylesheet" type="text/css" href="dots.css">
+  
 </head>
 
 <body>
@@ -47,7 +47,7 @@ $result = mysqli_query($link, $query);
     </ul>
   </nav>
 
-  <div class="banner"></div>
+  
   <div id="body">
     <div id="hero-slides">
       <div id="header">
@@ -65,15 +65,14 @@ $result = mysqli_query($link, $query);
         <div class="button" id="prev"></div>
         <div id="slides">
           <?php
-            // Displays the 5 latest classes
             while($row = mysqli_fetch_array($result)){
           ?>
-            <div class="slide" style="background-image: url(https://alca.tv/static/u/ef5af971-fc46-4ee1-a589-980346478696_opt.png);">
+            <div class="slide" style="background-image: url(/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg);">
               <div class="number"><?=$row['category']?></div>
               <div class="body">
                 <div class="location"><?=$row['location']?></div>
                 <div class="headline">Photo by Benjamin Hung</div>
-                <a href="https://unsplash.com/photos/EYmhcdGuYmI" target="_blank">
+                
                   <div class="link">View on Unsplash</div>
                 </a>
               </div>
