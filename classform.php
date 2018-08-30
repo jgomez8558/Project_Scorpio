@@ -1,6 +1,6 @@
 <?php 
 
-session_start();
+include('authlogin.php');
 if(array_key_exists("submit",$_POST)){
 
   include('connection.php');

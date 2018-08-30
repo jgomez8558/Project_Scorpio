@@ -1,8 +1,10 @@
 <?php 
 
-session_start();
+include('authlogin.php');
 
 include('connection.php');
+
+$role = (string)$_SESSION['role'];
 
 $query = "SELECT * FROM classes";
 
@@ -39,15 +41,22 @@ $result = mysqli_query($link, $query);
       <li>
         <a href="/braintrendy/logout.php">Logout</a>
       </li>
+      <?php if($role < 1 ) { ?>
       <li>
       <a href="/braintrendy/classform.php">Create a Class</a>
       </li>
+
+      <?php } ?>
     </ul>
   </nav>
 
   
   <div id="body">
    
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome! </h1>
+    <p class="lead">This is the classes page where you can sign up for any class you want.</p>
+</div>
     
   
 
