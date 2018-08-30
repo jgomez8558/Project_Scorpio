@@ -1,6 +1,6 @@
 <?php 
 
-session_start();
+include('authlogin.php');
 
 include('connection.php');
 
@@ -44,8 +44,31 @@ $row = mysqli_fetch_array($result);
               <p>Locaton: <br> <?= $row['location']?></p>
               <p>Date: <br><?= $row['date']?></p>
               <p>Category: <br><?= $row['category']?></p>
-              <a href="signup.php" class="btn btn-primary">Sign Up!</a>
+              <?php
+
+                if(isset($_POST['submit'])){
+
+                  $userId = (string)$_SESSION['id'];
+                  // Creating Date
+                 $dt = new DateTime();
+                 $date =  $dt->format('Y-m-d H:i:s');
+                 $query = "INSERT INTO register ( classId, userId, date)
+                 VALUES ('".mysqli_real_escape_string($link, $classId)."',
+                         '".mysqli_real_escape_string($link, $userId)."',
+                         '".mysqli_real_escape_string($link, $date)."')";
+     
+                 mysqli_query($link, $query);
+ 
+                  header("Location: /braintrendy/class.php");
+                  exit;
+              
+                }
+              
+              ?>
+               <form method = "POST">
+               <input type="submit" name = "submit" value = "submit">
               <a href="class.php" class="btn btn-primary">Return</a>
+              </form>
             
             </div>
             <div class="card-footer text-muted">
