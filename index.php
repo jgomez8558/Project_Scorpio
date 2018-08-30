@@ -1,6 +1,6 @@
 <?php
 
-include('authlogin.php');
+session_start();
 
 include("connection.php");
 
@@ -72,10 +72,10 @@ if (!empty($_POST["logout"])) {
                 </form>
 
     <!-- Remind Passowrd -->
-                <div id="formFooter">
+                <!-- <div id="formFooter">
                         <a class="underlineHover" href="#">Forgot Password?</a>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <script

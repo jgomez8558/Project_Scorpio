@@ -1,6 +1,6 @@
 <?php 
 
-include('authlogin.php');
+session_start();
 
 include('connection.php');
 
