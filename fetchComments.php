@@ -1,7 +1,7 @@
 <?php
 
 //fetch_comment.php
-include('authlogin.php');
+
 include('./connection.php');
 
 $query = "
