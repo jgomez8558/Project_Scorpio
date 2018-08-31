@@ -51,12 +51,12 @@ $result = mysqli_query($link, $query);
   <div id="body">
     <div id="hero-slides">
       <div id="header">
-        <div id="logo"></div>
-        <div id="menu">
-          <div id="hamburger">
+        
+        <div >
+          <div >
+            <!-- <div class="slice"></div>
             <div class="slice"></div>
-            <div class="slice"></div>
-            <div class="slice"></div>
+            <div class="slice"></div> -->
           </div>
         </div>
       </div>
@@ -71,9 +71,9 @@ $result = mysqli_query($link, $query);
               <div class="number"><?=$row['category']?></div>
               <div class="body">
                 <div class="location"><?=$row['location']?></div>
-                <div class="headline">Photo by Benjamin Hung</div>
+                <div class="headline"></div>
                 
-                  <div class="link">View on Unsplash</div>
+                  <div class="link"></div>
                 </a>
               </div>
             </div>
@@ -143,7 +143,7 @@ $result = mysqli_query($link, $query);
        <h6><a href="tel:">123-456-7890</a></h6>
        <h6><a href="">123 Fake St<br />Fake, PA 11111</a></h6>
     </div>
-    <div class="footer-navigation">
+    <!-- <div class="footer-navigation">
       <div class="footer-links-holder">
         <h3><a href="">Section 1</a></h3>
         <ul class="footer-links">
@@ -168,7 +168,7 @@ $result = mysqli_query($link, $query);
           <li><a href="">Page Title 1</a></li>
           <li><a href="">Page Title 2</a></li>
           <li><a href="">Page Title 3</a></li>
-          <li><a href="">Page Title 4</a></li>
+          <li><a href="">Page Title 4</a></li> -->
         </ul>
       </div>
     </div>
