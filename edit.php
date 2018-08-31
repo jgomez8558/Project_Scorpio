@@ -20,7 +20,7 @@ $row = mysqli_fetch_array($result);
     <body id="grad">
         <div class="container-fluid mt-5">
             <div class="form card w-50 m-auto border">
-                <h1 class="text-center">Update Class</h1>
+                <h1 class="text-center mt-4">Update Class</h1>
                 <?php
                 $status = "";
                 if(isset($_POST['new']) && $_POST['new']==1)
@@ -47,7 +47,8 @@ $row = mysqli_fetch_array($result);
                     <p><input type="text" name="location" placeholder="Enter New Location" required value="<?= $row['location'];?>" /></p>
                     <p><input type="text" name="date" placeholder="Enter New Date" required value="<?= $row['date'];?>" /></p>
                     <p><input type="text" name="description" placeholder="Enter New Description" required value="<?= $row['description'];?>" /></p>
-                    <p><input name="submit" type="submit" value="Update" /></p>
+                    <a href="setting.php"><input name="cancel" type="button" class="float-left clearfix ml-5 mb-4" value="Cancel" /></a>
+                    <p><input name="submit" type="submit" class="float-right clearfix mr-5 mb-4" value="Update" /></p>
                 </form>
                 <?php } ?>
             </div>
