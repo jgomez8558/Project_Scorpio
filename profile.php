@@ -65,7 +65,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
         <div class="col-lg-8 col-md-8 col-sm-12 p-0 m-auto">
           <div class="card classes">
             <div class="card-body">
-              <h4 class="card-title">Classes</h4>
+              <h4 class="card-title">My Classes</h4>
             </div>
             <?php
               $query = "SELECT * FROM classes WHERE userId= $tempId ";
@@ -79,13 +79,13 @@ $result = mysqli_query($link, $query) or die (mysql_error());
                 <p class="card-text"><?=$row['location']?></p>
                 <h6 class="card-subtitle mb-2 text-muted"><?=$row['date']?></h6>
                 <p class="card-text"><?=$row['description']?></p>
-                <a href="#" class="card-link">Register</a>
               </div>
             </div>
             <?php } ?>
           </div>
         </div>
       </div>
+      
       <footer>
         <div class="centered clearfix">
           <div class="footer-logo">
@@ -100,40 +100,15 @@ $result = mysqli_query($link, $query) or die (mysql_error());
             <h6><a href="tel:">123-456-7890</a></h6>
             <h6><a href="">123 Fake St<br />Fake, PA 11111</a></h6>
           </div>
-          <div class="footer-navigation">
-            <div class="footer-links-holder">
-              <h3><a href="">Section 1</a></h3>
-              <ul class="footer-links">
-                <li><a href="">Page Title 1</a></li>
-                <li><a href="">Page Title 2</a></li>
-                <li><a href="">Page Title 3</a></li>
-                <li><a href="">Page Title 4</a></li>
-              </ul>
-            </div>
-            <div class="footer-links-holder">
-              <h3><a href="">Section 2</a></h3>
-              <ul class="footer-links">
-                <li><a href="">Page Title 1</a></li>
-                <li><a href="">Page Title 2</a></li>
-                <li><a href="">Page Title 3</a></li>
-                <li><a href="">Page Title 4</a></li>
-              </ul>
-            </div>
-            <div class="footer-links-holder">
-              <h3><a href="">Section 3</a></h3>
-              <ul class="footer-links">
-                <li><a href="">Page Title 1</a></li>
-                <li><a href="">Page Title 2</a></li>
-                <li><a href="">Page Title 3</a></li>
-                <li><a href="">Page Title 4</a></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="bottom-bar">
-            All Rights Reserved © 2016 | <a href="">Privacy Policy</a> | <a href="">Terms of Service</a>
+            All Rights Reserved © 2016 | <a href="pp.php">Privacy Policy</a> | <a href="tos.php">Terms of Service</a>
         </div>
       </footer>
+
     </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <script src="home.js"></script>

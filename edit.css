@@ -1,25 +1,19 @@
-body {
-  font-family: "Poppins", sans-serif;
-  background-image: url(/braintrendy/assets/background.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+#grad {
+    background-image: url("https://www.xmple.com/wallpaper/azure-cyan-gradient-linear-1920x1080-c2-56baed-56edea-a-0-f-14.svg");
+    position: static;
+    width: 100vw;
+    height: 175px;
+    object-fit: cover;
 }
-.container {
-  margin-top: 90px;
-  margin-left:135px;
-  box-sizing: border-box;    
-}
+.border {
+    background-color: white;
 
+}
 form{
-    font-size: 16px;
-    font-weight: 600;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    text-transform: uppercase;
-    display:inline-block;
-    margin: 40px 8px 40px 8px; 
+}
+.label {
+    margin: 0px;
 }
 
 input[type=button], input[type=submit]  {
@@ -55,11 +49,10 @@ input[type=button], input[type=submit]  {
     transform: scale(0.95);
   }
   
-  input[type=text], textarea {
+  input[type=text] {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
-    margin: 10px 0px;
     padding: 10px 15px;
     text-align: center;
     text-decoration: none;
