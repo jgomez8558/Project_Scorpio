@@ -111,7 +111,7 @@ $row = mysqli_fetch_array($result);
               </div>
             </div>
             <?php } ?>
-            <button type="button" class="btn btn-success">+</button>
+            <a href="classform.php"><button type="button" class="btn btn-success w-100">+</button></a>
           </div>
         </div>
       </div>
