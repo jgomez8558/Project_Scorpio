@@ -38,21 +38,21 @@ $result = mysqli_query($link, $query) or die (mysql_error());
         </li>
       </ul>
     </nav>
-    <div class="container-fluid p-0 color">
+    <div class="container-fluid p-0">
       <div class="row">
       <?php
       while($row = mysqli_fetch_assoc($result)){
       ?>
         <div class="col">
-          <img src="https://dz2cdn4.dzone.com/storage/rc-covers/8757499-recardheader90.png" id="background">
+          <img src="https://www.xmple.com/wallpaper/azure-cyan-gradient-linear-1920x1080-c2-56baed-56edea-a-0-f-14.svg" id="background">
           <img src="https://img.deusm.com/darkreading/DR-user.jpg" id="user">
           <h2 class="name"> <?=$row['firstName']?> <?=$row['lastName']?> </h2>
-          <a href="setting.php"> <button type="button" class="btn btn-primary float-right clearfix mt-3 mr-5">Edit</button> </a>
+          <a href="setting.php"> <input name="edit" type="button" class=" btn btn-primary float-right clearfix mt-3 mr-5" value="Edit" /> </a>
         </div>
       </div>
       <div class="row mb-5">
         <div class="col-lg-3 col-md-4 col-sm-12 p-0 mx-auto">
-          <div class="card about">
+          <div class="card about ">
             <div class="card-body">
               <h4 class="card-title">About <?=$row['firstName']?> <?=$row['lastName']?></h4>
               <p>Address: <?=$row['address']?></p>
