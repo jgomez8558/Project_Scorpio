@@ -12,7 +12,7 @@ $row = mysqli_fetch_array($result);
 
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
       <meta charset="utf-8">
       <title>Setting</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -40,7 +40,7 @@ $row = mysqli_fetch_array($result);
       <div class="container-fluid p-0">
         <div class="row">
           <div class="col">
-            <img src="https://dz2cdn4.dzone.com/storage/rc-covers/8757499-recardheader90.png" id="background">
+            <img src="https://www.xmple.com/wallpaper/azure-cyan-gradient-linear-1920x1080-c2-56baed-56edea-a-0-f-14.svg" id="background">
             <img src="https://img.deusm.com/darkreading/DR-user.jpg" id="user">
             <h2 class="name"> <?=$row['firstName']?> <?=$row['lastName']?> </h2>
           </div>
@@ -102,7 +102,7 @@ $row = mysqli_fetch_array($result);
             ?>
             <div class="card m-3 ">
               <div class="card-body">
-                <h5 class="card-title"><?=$row['class']?></h5>
+              <h5 class="card-title"><?=$row['class']?></h5>
                 <p class="card-text"><?=$row['location']?></p>
                 <h6 class="card-subtitle mb-2 text-muted"><?=$row['date']?></h6>
                 <p class="card-text"><?=$row['description']?></p>
