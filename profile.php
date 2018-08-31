@@ -65,7 +65,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
         <div class="col-lg-8 col-md-8 col-sm-12 p-0 m-auto">
           <div class="card classes">
             <div class="card-body">
-              <h4 class="card-title">Classes</h4>
+              <h4 class="card-title">My Classes</h4>
             </div>
             <?php
               $query = "SELECT * FROM classes WHERE userId= $tempId ";
@@ -79,7 +79,6 @@ $result = mysqli_query($link, $query) or die (mysql_error());
                 <p class="card-text"><?=$row['location']?></p>
                 <h6 class="card-subtitle mb-2 text-muted"><?=$row['date']?></h6>
                 <p class="card-text"><?=$row['description']?></p>
-                <a href="#" class="card-link">Register</a>
               </div>
             </div>
             <?php } ?>
@@ -109,7 +108,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
             All Rights Reserved © 2016 | <a href="pp.php">Privacy Policy</a> | <a href="tos.php">Terms of Service</a>
         </div>
       </footer>
-      
+
     </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <script src="home.js"></script>

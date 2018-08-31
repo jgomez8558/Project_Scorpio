@@ -93,7 +93,7 @@ $row = mysqli_fetch_array($result);
         <div class="col-lg-8 col-md-8 col-sm-12 p-0 m-auto">
           <div class="card classes">
             <div class="card-body">
-              <h4 class="card-title">Classes</h4>
+              <h4 class="card-title">My Classes</h4>
             </div>
             <?php
               $query = "SELECT * FROM classes WHERE userId= $tempId ";
