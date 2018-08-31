@@ -9,6 +9,12 @@
     background-color: white;
 
 }
+form{
+    text-align: center;
+}
+.label {
+    margin: 0px;
+}
 
 input[type=button], input[type=submit]  {
     background-color: #56baed;
@@ -47,7 +53,6 @@ input[type=button], input[type=submit]  {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
-    margin: 10px 0px;
     padding: 10px 15px;
     text-align: center;
     text-decoration: none;

@@ -1,24 +1,14 @@
 body {
-        font-family: "Poppins", sans-serif;
-        background-image: url(/braintrendy/assets/background.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        min-height: 100%;
-          min-width: 1024px;
-          width: 100%;
-          height: auto;
-          position: fixed;
-          top: 0;
-          left: 0;
-      
+  font-family: "Poppins", sans-serif;
+  background-image: url(/braintrendy/assets/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-
 .container {
-    margin-top: 90px;
-    margin-left:135px;
-    box-sizing: border-box;
-    
+  margin-top: 90px;
+  margin-left:135px;
+  box-sizing: border-box;    
 }
 
 form{
