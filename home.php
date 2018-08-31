@@ -174,7 +174,7 @@ $result = mysqli_query($link, $query);
     </div>
   </div>
   <div class="bottom-bar">
-      All Rights Reserved © 2016 | <a href="">Privacy Policy</a> | <a href="">Terms of Service</a>
+      All Rights Reserved © 2016 | <a href="pp.php">Privacy Policy</a> | <a href="tos.php">Terms of Service</a>
   </div>
 </footer>
             </div>
