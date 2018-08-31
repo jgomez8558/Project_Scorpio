@@ -15,6 +15,7 @@
   <h2 align="center"><a href="#">Comment System using PHP and Ajax</a></h2>
   <br />
   <div class="container">
+  
    <form method="POST" id="comment_form">
     <div class="form-group">
      <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
