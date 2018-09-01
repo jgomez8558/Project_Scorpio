@@ -37,30 +37,34 @@ if(array_key_exists("submit",$_POST)){
     <link rel="stylesheet" type="text/css" href="classform.css">
   </head>
   <body>
-    <div class="container">
-      <div class="card card-container shadow p-3 mb-5 bg-white rounded">
-        <form method = "POST">
-          Category:<br>
-          <select name="category">
-            <option value="Technology">Technology</option>
-            <option value="Health">Health</option>
-            <option value="Art">Art</option>
-            <option value="Cooking">Cooking</option>
-            <option value="Music">Music</option>
-            <option value="Music">Miscellanious</option>
-          </select>
-          <br>
-          Class:<br>
-          <input type="text" name="class"><br>
-          Location:<br>
-          <input type="text" name="location"><br>
-          Date:<br>
-          <input type="text" name="date"><br>
-          Description:<br>
-          <textarea name="description" rows="10" cols="30"></textarea><br>
-          <input type="submit" name = "submit" value = "Add Class">
-          <a href="class.php"> <input type="button" class="btn btn-primary" name = "return" value = "Return To Classes"> </a>
-        </form>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-md-8 col-sm-12 p-0 m-auto">
+          <div class="card card-container my-5 mx-3 shadow p-3 bg-white rounded">
+            <form method = "POST">
+              Category:<br>
+              <select name="category">
+                <option value="Technology">Technology</option>
+                <option value="Health">Health</option>
+                <option value="Art">Art</option>
+                <option value="Cooking">Cooking</option>
+                <option value="Music">Music</option>
+                <option value="Music">Miscellanious</option>
+              </select>
+              <br>
+              Class:<br>
+              <input type="text" name="class"><br>
+              Location:<br>
+              <input type="text" name="location"><br>
+              Date:<br>
+              <input type="text" name="date"><br>
+              Description:<br>
+              <textarea name="description" rows="10" cols="30"></textarea><br>
+              <input type="submit" name = "submit" value = "Add Class">
+              <a href="class.php"> <input type="button" class="btn btn-primary" name = "return" value = "Return To Classes"> </a>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
