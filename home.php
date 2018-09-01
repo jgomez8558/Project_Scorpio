@@ -28,6 +28,7 @@ $result = mysqli_query($link, $query);
   <link rel="stylesheet" type="text/css" href="event.css">
   <link rel="stylesheet" type="text/css" href="footer.css">
   <link rel="stylesheet" type="text/css" href="dots.css">
+  <link rel="stylesheet" href="profile.css"/>
   
 </head>
 
@@ -48,7 +49,15 @@ $result = mysqli_query($link, $query);
       </li>
     </ul>
   </nav>
-
+  <div class="container-fluid p-0">
+      <div class="row">
+      
+        <div class="col">
+          <img src="https://www.xmple.com/wallpaper/azure-cyan-gradient-linear-1920x1080-c2-56baed-56edea-a-0-f-14.svg" id="background">
+         
+          
+        </div>
+      </div>
   
   <div id="body">
     <div id="hero-slides">
@@ -72,7 +81,7 @@ $result = mysqli_query($link, $query);
             <div class="slide" style="background-image: url(/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg);">
               <div class="number"><?=$row['category']?></div>
               <div class="body">
-                <div class="location"><?=$row['location']?></div>
+              <h4 class="card-title">Class:  <?= $row['class']?></h4>
                 <div class="headline"></div>
                 
                   <div class="link"></div>
@@ -214,8 +223,7 @@ $result = mysqli_query($link, $query);
   </div>
 </footer>
             </div>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
