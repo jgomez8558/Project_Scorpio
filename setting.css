@@ -9,12 +9,12 @@
     border: 2px solid #f6f6f6;
     border-radius: 50%;
     top: 115px;
-    left: 80px;
+    left: 60px;
     width: 125px;
     height: 125px;
 }
 .name {
-    padding-left: 200px;
+    padding-left: 180px;
     padding-top: 10px;
 }
 .classes {

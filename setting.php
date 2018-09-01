@@ -5,6 +5,7 @@ include('authlogin.php');
 include('connection.php');
 
 $tempId = (string)$_SESSION['id'];
+$role = $_SESSION['role'];
 $query = "SELECT * FROM profile WHERE userId= $tempId";
 $result = mysqli_query($link, $query) or die (mysql_error());
 $row = mysqli_fetch_array($result);
@@ -91,6 +92,7 @@ $row = mysqli_fetch_array($result);
           <?php } ?>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-12 p-0 m-auto">
+        <?php if($role >1 ) { ?>
           <div class="card classes">
             <div class="card-body">
               <h4 class="card-title">My Classes</h4>
@@ -113,6 +115,30 @@ $row = mysqli_fetch_array($result);
             <?php } ?>
             <a href="classform.php"><button type="button" class="btn btn-success w-100">+</button></a>
           </div>
+
+          <?php } ?>
+
+          <div class="card classes">
+            <div class="card-body">
+              <h4 class="card-title">Registered Classes</h4>
+            </div>
+            <?php
+              $query = "SELECT register.classId, classes.class, classes.location, classes.date, classes.description, classes.category FROM classes INNER JOIN register ON classes.classId=register.classId";
+              $result = mysqli_query($link, $query) or die (mysql_error());
+              while($row = mysqli_fetch_array($result)) {
+            ?>
+            <div class="card m-3 ">
+              <div class="card-body">
+              <h5 class="card-title"><?=$row['class']?></h5>
+                <p class="card-text"><?=$row['location']?></p>
+                <h6 class="card-subtitle mb-2 text-muted"><?=$row['date']?></h6>
+                <p class="card-text"><?=$row['description']?></p>
+                <a href="unregister.php?classId=<?=$row['classId'];?>"> <input name="delete" type="button" class="btn delete" value="Unregister"/></a>
+              </div>
+            </div>
+            <?php } ?>
+          </div>
+
         </div>
       </div>
     </div>
