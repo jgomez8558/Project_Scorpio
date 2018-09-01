@@ -24,6 +24,7 @@ if (!empty($_POST["login"])) {
     if ($auth === true) {
 
         $_SESSION['id'] = $row['userId'];
+        $_SESSION['role'] = $row['role'];
         //             header("Location: /braintrendy/home.php");
         header("Location: /braintrendy/home.php");
 
@@ -53,6 +54,7 @@ if (!empty($_POST["logout"])) {
     </head>
 
     <body>
+        
         <div class="wrapper fadeInDown">
             <div id="formContent">
             <!-- Tabs Titles -->
@@ -72,10 +74,10 @@ if (!empty($_POST["logout"])) {
                 </form>
 
     <!-- Remind Passowrd -->
-                <div id="formFooter">
+                <!-- <div id="formFooter">
                         <a class="underlineHover" href="#">Forgot Password?</a>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <script

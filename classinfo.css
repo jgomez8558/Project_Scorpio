@@ -1,4 +1,7 @@
-container {
-   
+#background {
+    font-family: "Poppins", sans-serif;
+    background-image: url(/braintrendy/assets/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-  
