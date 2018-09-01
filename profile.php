@@ -5,6 +5,7 @@ include('authlogin.php');
 include('connection.php');
 
 $tempId = (string)$_SESSION['id'];
+$role = (string)$_SESSION['role'];
 $query = "SELECT * FROM profile WHERE userId= $tempId ";
 $result = mysqli_query($link, $query) or die (mysql_error());
 ?>
@@ -22,6 +23,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   </head>
   <body>
+
     <nav>
       <ul>
         <li>
@@ -38,6 +40,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
         </li>
       </ul>
     </nav>
+
     <div class="container-fluid p-0">
       <div class="row">
       <?php
@@ -62,7 +65,9 @@ $result = mysqli_query($link, $query) or die (mysql_error());
           </div>
         </div>
         <?php } ?>
+
         <div class="col-lg-8 col-md-8 col-sm-12 p-0 m-auto">
+        <?php if($role >1 ) { ?>
           <div class="card classes">
             <div class="card-body">
               <h4 class="card-title">My Classes</h4>
@@ -74,7 +79,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
             ?>
             <div class="card m-3 ">
               <div class="card-body">
-              <img class="class-img float-left clearfix mr-3" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg">
+                <img class="class-img float-left clearfix mr-3" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg">
                 <h4 class="mb-3"><?=$row['class']?></h4>
                 <p class="card-text"><?=$row['location']?></p>
                 <h6 class="card-subtitle mb-2 text-muted"><?=$row['date']?></h6>
@@ -83,6 +88,30 @@ $result = mysqli_query($link, $query) or die (mysql_error());
             </div>
             <?php } ?>
           </div>
+
+        <?php } ?>
+
+            <div class="card classes">
+                <div class="card-body">
+                  <h4 class="card-title">Registered Classes</h4>
+                </div>
+            <?php
+              $query = "SELECT classes.class, classes.location, classes.date, classes.description, classes.category FROM classes INNER JOIN register ON classes.classId=register.classId";
+              $result = mysqli_query($link, $query) or die (mysql_error());
+              while($row = mysqli_fetch_array($result)) {
+                ?>
+            <div class="card m-3 ">
+              <div class="card-body">
+                <img class="class-img float-left clearfix mr-3" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg">
+                <h4 class="mb-3"><?=$row['class']?></h4>
+                <p class="card-text"><?=$row['location']?></p>
+                <h6 class="card-subtitle mb-2 text-muted"><?=$row['date']?></h6>
+                <p class="card-text"><?=$row['description']?></p>
+              </div>
+            </div>
+            <?php } ?>
+            </div>
+            
         </div>
       </div>
       

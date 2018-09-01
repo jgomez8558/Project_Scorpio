@@ -21,7 +21,7 @@ $row = mysqli_fetch_array($result);
         <div class="container-fluid mt-5">
             <div class="row" >
                 <div class="col-lg-6 col-md-6 col-sm-12 p-0 m-auto">
-                    <div class="form card border">
+                    <div class="form card border edit">
                         <h1 class="text-center mt-4">Update Class</h1>
                         <?php
                         $status = "";
