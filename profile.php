@@ -57,7 +57,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
         <div class="col-lg-3 col-md-4 col-sm-12 p-0 mx-auto">
           <div class="card about ">
             <div class="card-body">
-              <h4 class="card-title">About <?=$row['firstName']?> <?=$row['lastName']?></h4>
+              <h4 class="card-title">About</h4>
               <p>Address: <?=$row['address']?></p>
               <p>Phone: <?=$row['phone']?></p>
               <p>Email: <?=$row['email']?></p>
