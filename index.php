@@ -30,7 +30,7 @@ if (!empty($_POST["login"])) {
 
     } else {
         $message = "Password and Email did not match";
-        echo $message;
+        echo "<script type='text/javascript'>alert('$message');</script>";
     }
 }
 
@@ -55,7 +55,7 @@ if (!empty($_POST["logout"])) {
 
     <body>
         
-        <div class="wrapper fadeInDown">
+            <div class="wrapper fadeInDown">
             <div id="formContent">
             <!-- Tabs Titles -->
                 <h2 class="active"> Sign In </h2>
@@ -68,17 +68,20 @@ if (!empty($_POST["logout"])) {
 
     <!-- Login Form -->
                 <form method = "POST" >
-                    <input type="text" id="login" class="fadeIn second" name="email" placeholder="email">
+                    <input type="email" id="login" class="fadeIn second" name="email" placeholder="email">
                     <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
                      <input type="submit" name="login" class="fadeIn fourth" value="Login">
                 </form>
+            </div>
+        </div>
+
 
     <!-- Remind Passowrd -->
                 <!-- <div id="formFooter">
                         <a class="underlineHover" href="#">Forgot Password?</a>
                 </div>
             </div> -->
-        </div>
+        
 
         <script
                 src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
