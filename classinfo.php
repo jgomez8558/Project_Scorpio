@@ -23,11 +23,10 @@ $row = mysqli_fetch_array($result);
     <link rel="stylesheet" type="text/css" href="classform.css">
   </head>
   <body>
-    <div id="body">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12 p-0 m-auto">
-            <div class="card text-center mt-3 shadow p-3 mb-5 bg-white rounded">
+          <div class="col-lg-6 col-md-8 col-sm-12 p-0 m-auto">
+            <div class="card text-center my-5 mx-3 shadow p-3 bg-white rounded">
               <div class="card-body">
                 <h5 class="card-title">Class: <br> <?= $row['class']?></h5>
                 <img class="img-fluid" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg">
@@ -53,14 +52,25 @@ $row = mysqli_fetch_array($result);
                     }
                   ?>
                 <form method = "POST">
-                  <input type="submit" name = "submit" value = "Register">
-                  <a href="class.php"> <input name="return" type="button" class="btn btn-primary" value="Return To Classes"/> </a>
+                  <?php
+                  $querys = "SELECT * FROM register WHERE classId = '".$classId."'". "AND userId =  '".$_SESSION['id']."'";
+
+                  $results = mysqli_query($link, $querys) or die ( mysql_error());
+            
+                  $rows = mysqli_fetch_array($results);
+
+                    if ($rows != null){
+                    ?>
+                      <input style = "display: none" type="submit" name = "submit" value = "submit">
+                    <?php }else{?>
+                      <input type="submit" name = "submit" value = "Register">
+                    <?php }?>
+                    <a href="class.php"> <input name="return" type="button" class="btn btn-primary" value="Return To Classes"/> </a>
                 </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </body>
 </html>

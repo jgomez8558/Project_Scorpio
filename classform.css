@@ -5,11 +5,6 @@ body {
   background-position: center;
   background-size: cover;
 }
-.container {
-  margin-top: 90px;
-  margin-left:135px;
-  box-sizing: border-box;    
-}
 
 form{
     font-size: 16px;

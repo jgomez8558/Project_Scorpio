@@ -22,7 +22,7 @@ $result = mysqli_query($link, $query);
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <link rel="stylesheet" type="text/css" href="class.css">
-  <link rel="stylesheet" type="text/css" href="fontcolor.css">
+  <link rel="stylesheet" type="text/css" href="navbar.css">
   <link rel="stylesheet" type="text/css" href="footer.css">
 </head>
 
@@ -76,7 +76,7 @@ $result = mysqli_query($link, $query);
                 <p>Location:  <?= $row['location']?></p>
                 <p>Date:  <?= $row['date']?></p>
                 <p>Category:  <?= $row['category']?></p>
-                <a href="classinfo.php?classId=<?= $row['classId'];?>" class="btn btn-primary">Classinfo</a>
+                <a href="classinfo.php?classId=<?= $row['classId'];?>" class="btn btn-light">Classinfo</a>
             </div><!--.row-->
             </div>
     </div>
