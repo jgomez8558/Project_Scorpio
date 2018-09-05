@@ -27,16 +27,16 @@ $result = mysqli_query($link, $query) or die (mysql_error());
     <nav>
       <ul>
         <li>
-          <a href="/braintrendy/home.php">Home</a>
+          <a class="white" href="/braintrendy/home.php">Home</a>
         </li>
         <li>
-          <a href="/braintrendy/class.php">Classes</a>
+          <a class="white" href="/braintrendy/class.php">Classes</a>
         </li>
         <li>
-          <a href="/braintrendy/profile.php">Profile</a>
+          <a class="white" href="/braintrendy/profile.php">Profile</a>
         </li>
         <li>
-          <a href="/braintrendy/logout.php">Logout</a>
+          <a class="white" href="/braintrendy/logout.php">Logout</a>
         </li>
       </ul>
     </nav>
@@ -134,7 +134,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
           </div>
         </div>
         <div class="bottom-bar">
-            All Rights Reserved © 2016 | <a href="pp.php">Privacy Policy</a> | <a href="tos.php">Terms of Service</a>
+            All Rights Reserved © 2016 | <a class="black" href="pp.php">Privacy Policy</a> | <a class="black" href="tos.php">Terms of Service</a>
         </div>
       </footer>
 

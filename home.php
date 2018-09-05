@@ -35,16 +35,16 @@ $result = mysqli_query($link, $query);
   <nav>
     <ul>
       <li>
-        <a href="/braintrendy/home.php">Home</a>
+        <a class="white" href="/braintrendy/home.php">Home</a>
       </li>
       <li>
-        <a href="/braintrendy/class.php">Classes</a>
+        <a class="white" href="/braintrendy/class.php">Classes</a>
       </li>
       <li>
-        <a href="/braintrendy/profile.php">Profile</a>
+        <a class="white" href="/braintrendy/profile.php">Profile</a>
       </li>
       <li>
-        <a href="/braintrendy/logout.php">Logout</a>
+        <a class="white" href="/braintrendy/logout.php">Logout</a>
       </li>
     </ul>
   </nav>
