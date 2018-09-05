@@ -133,9 +133,9 @@ $result = mysqli_query($link, $query) or die (mysql_error());
             </div>
           </div>
         </div>
-        <div class="bottom-bar">
-            All Rights Reserved © 2016 | <a class="black" href="pp.php">Privacy Policy</a> | <a class="black" href="tos.php">Terms of Service</a>
-        </div>
+        <div class="footer-copyright text-center py-3">
+      All Rights Reserved © 2016 | <a class="black" href="pp.php">Privacy Policy</a> | <a class="black" href="tos.php">Terms of Service</a>
+    </div>
       </footer>
 
     </div>
