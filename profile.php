@@ -70,7 +70,7 @@ $result = mysqli_query($link, $query) or die (mysql_error());
         <?php if($role >1 ) { ?>
           <div class="card classes">
             <div class="card-body">
-              <h4 class="card-title">My Classes</h4>
+              <h4 class="card-title">Created Classes</h4>
             </div>
             <?php
               $query = "SELECT * FROM classes WHERE userId= $tempId ";
@@ -125,9 +125,9 @@ $result = mysqli_query($link, $query) or die (mysql_error());
           </div>
           <div class="footer-contact">
             <h3><a href="">Contact</a></h3>
-            <h6><a href="mailto:">fake@fake.com</a></h6>
-            <h6><a href="tel:">123-456-7890</a></h6>
-            <h6><a href="">123 Fake St<br />Fake, PA 11111</a></h6>
+            <h6><a href="mailto:">BrainTrendy@mail.com</a></h6>
+            <h6><a href="tel:">956-456-7890</a></h6>
+            <h6><a href="">801 N Brian<br />Mission, TX 78572</a></h6>
           </div>
               </ul>
             </div>
