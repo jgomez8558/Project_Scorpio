@@ -53,9 +53,9 @@ $result = mysqli_query($link, $query);
   
   <div id="body">
    
-  <div class="jumbotron">
-    <h1 class="display-4">Welcome! </h1>
-    <p class="lead">This is the classes page where you can sign up for any class you want.</p>
+  <div class="jumbotron text-white font-weight-bold">
+    <h1 class="display-4 font-weight-bold">Register for classes today! </h1>
+    <p class="lead font-weight-bold"></p>
 </div>
     
   
@@ -65,12 +65,12 @@ $result = mysqli_query($link, $query);
   <?php 
     while($row = mysqli_fetch_array($result)){
       ?>
-		<div class="card border-primary mb-2 w-100 mb-1">
+		<div class="card border-primary my-4 w-100 mb-1 ">
             <div class="row">
             <div class="col-md-3">
             <img id="classimg" style="max-height: 225px" class="logo" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg">
             </div>
-            <div class="card-body text-center col-md-9">
+            <div class="card-body text-white font-weight-bold text-center col-md-9 w-75">
             <h5 class="card-title">Class:  <?= $row['class']?></h5>
                 <p class="card-text">Description:  <?= $row['description']?></p>
                 <p>Location:  <?= $row['location']?></p>

@@ -67,19 +67,20 @@ $result = mysqli_query($link, $query);
         <div class="button" id="prev"></div>
         <div id="slides">
           <?php
-            while($row = mysqli_fetch_array($result)){
-          ?>
-            <div class="slide" style="background-image: url(/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg);">
-              <div class="number"><?=$row['category']?></div>
+          while ($row = mysqli_fetch_array($result)) {
+            ?>
+            <div class="slide" style="background-image: url(/braintrendy/assets/categoryPictures/<?= $row['category'] ?>.jpg);">
+              <div class="number"><?= $row['category'] ?></div>
               <div class="body">
-                <div class="location"><?=$row['location']?></div>
+                <div class="location"><?= $row['location'] ?></div>
                 <div class="headline"></div>
                 
                   <div class="link"></div>
                 </a>
               </div>
             </div>
-          <?php } ?>
+          <?php 
+        } ?>
         </div>
       </div>
       <div id="next-catch"></div>
@@ -97,10 +98,10 @@ $result = mysqli_query($link, $query);
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2>About Company Page</h2><br>
-      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+      <h2>About Company</h2><br>
+      <h4>A marketplace for learning and teaching locally and online. Students learn new skills and career goals taught by experts and professionals in their respective fields who want to develop their teaching skills.</h4><br>
+      
+      <br>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo"></span>
@@ -116,9 +117,14 @@ $result = mysqli_query($link, $query);
     </div>
     <div class="col-sm-8">
       <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h4><strong>MISSION:</strong>Providing alternative routes of education for our students, in order to effect the best treatment available for all of the individuals and families whose lives may someday be touched by those who have come to us for their education and training.</h4><br>
+      <p><strong>VISION:</strong> <br>
+        – Offer a dynamic, interactive education environment that engages students in the learning process<br>
+        – Provide constructive feedback to promote student self- assessment and motivation<br>
+        – Provide clear learning outcomes, detailed instruction, and assessment for all courses to ensure course mastery and student success
+        <br>
+        – Use technology to create effective modes and means of instruction that expand access to learning
+    </p>
     </div>
   </div>
 </div>
@@ -130,37 +136,19 @@ $result = mysqli_query($link, $query);
   <br>
   <div class="row slideanim">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-off logo-small"></span>
-      <h4>POWER</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-heart logo-small"></span>
-      <h4>LOVE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
       <span class="glyphicon glyphicon-lock logo-small"></span>
-      <h4>JOB DONE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-  </div>
-  <br><br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-leaf logo-small"></span>
-      <h4>GREEN</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4>JOB Leads</h4>
+      <p>Assistance in job search</p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-certificate logo-small"></span>
       <h4>CERTIFIED</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <p>Classes offer certification</p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-wrench logo-small"></span>
-      <h4 style="color:#303030;">HARD WORK</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4 style="color:#303030;">Community Outreach</h4>
+      <p>Get connected with your community</p>
     </div>
   </div>
 </div>
@@ -175,9 +163,9 @@ $result = mysqli_query($link, $query);
     </div>
     <div class="footer-contact">
        <h3><a href="">Contact</a></h3>
-       <h6><a href="mailto:">fake@fake.com</a></h6>
-       <h6><a href="tel:">123-456-7890</a></h6>
-       <h6><a href="">123 Fake St<br />Fake, PA 11111</a></h6>
+       <h6><a href="mailto:">BrainTrendy@mail.com</a></h6>
+       <h6><a href="tel:">956-456-7890</a></h6>
+       <h6><a href="">801 N Brian<br />Mission, TX 78572</a></h6>
     </div>
     <!-- <div class="footer-navigation">
       <div class="footer-links-holder">
