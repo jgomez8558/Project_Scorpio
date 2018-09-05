@@ -52,8 +52,20 @@ $row = mysqli_fetch_array($result);
                     }
                   ?>
                 <form method = "POST">
-                  <input type="submit" name = "submit" value = "Register">
-                  <a href="class.php"> <input name="return" type="button" class="btn btn-primary" value="Return To Classes"/> </a>
+                  <?php
+                  $querys = "SELECT * FROM register WHERE classId = '".$classId."'". "AND userId =  '".$_SESSION['id']."'";
+
+                  $results = mysqli_query($link, $querys) or die ( mysql_error());
+            
+                  $rows = mysqli_fetch_array($results);
+
+                    if ($rows != null){
+                    ?>
+                      <input style = "display: none" type="submit" name = "submit" value = "submit">
+                    <?php }else{?>
+                      <input type="submit" name = "submit" value = "Register">
+                    <?php }?>
+                    <a href="class.php"> <input name="return" type="button" class="btn btn-primary" value="Return To Classes"/> </a>
                 </form>
               </div>
             </div>
