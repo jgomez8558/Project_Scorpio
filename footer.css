@@ -2,7 +2,7 @@
 
 /* HTML Set up */
 footer {
-  background: #191919;
+  background: #A9A9A9;
   color: #fff;
   margin: 0;
   
@@ -44,7 +44,7 @@ footer .bottom-bar {
   text-align: center;
   font-size: .8em;
   text-transform: uppercase;
-  background: #000;
+  background: #A9A9A9;
   padding: 15px 0;
 }
 
