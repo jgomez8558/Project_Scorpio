@@ -95,7 +95,7 @@ $row = mysqli_fetch_array($result);
         <?php if($role >1 ) { ?>
           <div class="card classes">
             <div class="card-body">
-              <h4 class="card-title">My Classes</h4>
+              <h4 class="card-title">Created Classes</h4>
             </div>
             <?php
               $query = "SELECT * FROM classes WHERE userId= $tempId ";

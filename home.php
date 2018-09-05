@@ -34,17 +34,17 @@ $result = mysqli_query($link, $query);
 <body>
   <nav>
     <ul>
-      <li>
-        <a href="/braintrendy/home.php">Home</a>
+    <li>
+        <a class="white" href="/braintrendy/home.php">Home</a>
       </li>
       <li>
-        <a href="/braintrendy/class.php">Classes</a>
+        <a class="white" href="/braintrendy/class.php">Classes</a>
       </li>
       <li>
-        <a href="/braintrendy/profile.php">Profile</a>
+        <a class="white" href="/braintrendy/profile.php">Profile</a>
       </li>
       <li>
-        <a href="/braintrendy/logout.php">Logout</a>
+        <a class="white" href="/braintrendy/logout.php">Logout</a>
       </li>
     </ul>
   </nav>
@@ -152,57 +152,24 @@ $result = mysqli_query($link, $query);
     </div>
   </div>
 </div>
-  <div>
   <footer>
   <div class="centered clearfix">
     <div class="footer-logo">
       <img class="logo" src="/braintrendy/assets/logo2.png">
-      <a href=""><i class="fab fa-facebook"></i></a>
-      <i class="fab fa-linkedin"></i>
-      <i class="fab fa-twitter-square"></i>
     </div>
     <div class="footer-contact">
        <h3><a href="">Contact</a></h3>
        <h6><a href="mailto:">BrainTrendy@mail.com</a></h6>
        <h6><a href="tel:">956-456-7890</a></h6>
-       <h6><a href="">801 N Brian<br />Mission, TX 78572</a></h6>
+       <h6><a href="">801 N Brian<br />Mission, TX 78572</a></h6><br>
     </div>
-    <!-- <div class="footer-navigation">
-      <div class="footer-links-holder">
-        <h3><a href="">Section 1</a></h3>
-        <ul class="footer-links">
-          <li><a href="">Page Title 1</a></li>
-          <li><a href="">Page Title 2</a></li>
-          <li><a href="">Page Title 3</a></li>
-          <li><a href="">Page Title 4</a></li>
-        </ul>
-      </div>
-      <div class="footer-links-holder">
-        <h3><a href="">Section 2</a></h3>
-        <ul class="footer-links">
-          <li><a href="">Page Title 1</a></li>
-          <li><a href="">Page Title 2</a></li>
-          <li><a href="">Page Title 3</a></li>
-          <li><a href="">Page Title 4</a></li>
-        </ul>
-      </div>
-      <div class="footer-links-holder">
-        <h3><a href="">Section 3</a></h3>
-        <ul class="footer-links">
-          <li><a href="">Page Title 1</a></li>
-          <li><a href="">Page Title 2</a></li>
-          <li><a href="">Page Title 3</a></li>
-          <li><a href="">Page Title 4</a></li> -->
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="bottom-bar">
-      All Rights Reserved © 2016 | <a href="pp.php">Privacy Policy</a> | <a href="tos.php">Terms of Service</a>
-  </div>
+    
 </footer>
-            </div>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div class="footer-copyright text-center py-3">
+      All Rights Reserved © 2016 | <a href="pp.php">Privacy Policy</a> | <a href="tos.php">Terms of Service</a>
+    </div>
+            
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
