@@ -54,6 +54,7 @@ $result = mysqli_query($link, $query);
   <div id="body">
    
   <div class="jumbotron text-white font-weight-bold">
+    
     <h1 class="display-4 font-weight-bold">Register for classes today! </h1>
     <p class="lead font-weight-bold"></p>
 </div>
