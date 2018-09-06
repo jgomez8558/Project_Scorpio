@@ -1,5 +1,10 @@
 <?php
 //comments.php
+// Look for a POST request $_POST
+// Grab the data and save into the DB for this comment
+// Query all other comments for this post
+//render the page
+$classID = $_GET['classId'];
 
 ?>
 <!DOCTYPE html>
@@ -63,12 +68,20 @@ $(document).ready(function(){
 
  function load_comment()
  {
+
   $.ajax({
    url:"fetchComments.php",
-   method:"POST",
+   method:"GET",
+   data: {
+       classId: <?$classID?>
+   }
    success:function(data)
    {
-    $('#display_comment').html(data);
+    // $('#display_comment').html(data);
+    // Select the container where all comments will be aded to
+    for(var d of data) {
+        // append to the container
+    }
    }
   })
  }
