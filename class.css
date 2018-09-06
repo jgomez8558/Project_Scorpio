@@ -26,7 +26,7 @@ html {
   height: 225px;
   text-align: center;
   font-weight: 250; 
-  background-color: #56baed;
+  background-color: #5a74e7;
    
 }
 
@@ -40,6 +40,6 @@ nav {
 
 }
 .jumbotron {
-  background-color: #56baed;
+  background: #27cc0a;
 }
 

@@ -41,7 +41,7 @@ $result = mysqli_query($link, $query);
       <li>
         <a href="/braintrendy/logout.php">Logout</a>
       </li>
-      <?php if($role < 1 ) { ?>
+      <?php if($role > 1 ) { ?>
       <li>
       <a href="/braintrendy/classform.php">Create a Class</a>
       </li>
@@ -53,9 +53,9 @@ $result = mysqli_query($link, $query);
   
   <div id="body">
    
-  <div class="jumbotron">
-    <h1 class="display-4">Welcome! </h1>
-    <p class="lead">This is the classes page where you can sign up for any class you want.</p>
+  <div class="jumbotron text-white font-weight-bold">
+    <h1 class="display-4 font-weight-bold">Register for classes today! </h1>
+    <p class="lead font-weight-bold"></p>
 </div>
     
   
@@ -65,12 +65,12 @@ $result = mysqli_query($link, $query);
   <?php 
     while($row = mysqli_fetch_array($result)){
       ?>
-		<div class="card border-primary mb-2 w-100 mb-1">
+		<div class="card border-primary my-4 w-100 mb-1 ">
             <div class="row">
             <div class="col-md-3">
             <img id="classimg" style="max-height: 225px" class="logo" src="/braintrendy/assets/categoryPictures/<?= $row['category']?>.jpg">
             </div>
-            <div class="card-body text-center col-md-9">
+            <div class="card-body text-white font-weight-bold text-center col-md-9 w-75">
             <h5 class="card-title">Class:  <?= $row['class']?></h5>
                 <p class="card-text">Description:  <?= $row['description']?></p>
                 <p>Location:  <?= $row['location']?></p>
@@ -88,64 +88,24 @@ $result = mysqli_query($link, $query);
 
 
   
-<footer>
-  </footer>
-  <div class="footer">
-    <div id="button"></div>
-  <div id="container">
-  <div id="cont">
-  <div class="footer_center">
-  <div id="arrows">
-  <i class="fas fa-arrow-down"></i>
   <footer>
   <div class="centered clearfix">
     <div class="footer-logo">
       <img class="logo" src="/braintrendy/assets/logo2.png">
-      
     </div>
     <div class="footer-contact">
        <h3><a href="">Contact</a></h3>
-       <ul class="footer-links">
-          <li><a href="">Page Title 1</a></li>
-          <li><a href="">Page Title 2</a></li>
-          
-        </ul>
+       <h6><a href="mailto:">BrainTrendy@mail.com</a></h6>
+       <h6><a href="tel:">956-456-7890</a></h6>
+       <h6><a href="">801 N Brian<br />Mission, TX 78572</a></h6><br>
     </div>
-    <div class="footer-navigation">
-      <div class="footer-links-holder">
-        <h3><a href="">Legal Stuff</a></h3>
-        <ul class="footer-links">
-          <li><a href="tos.php">Term Of Services</a></li>
-          <li><a href="pp.php">Privacy Policy</a></li>
-          <li><h6>All Rights Reserved © braintrendy 2018</h6></li>
-        </ul>
-      </div>
-      <div class="footer-links-holder">
-        <h3><a href="">About Us</a></h3>
-        <ul class="footer-links">
-          <li><a href="">Page Title 1</a></li>
-          
-          
-        </ul>
-      </div>
-      <div class="footer-links-holder">
-        <h3><a href="">Social Media</a></h3>
-        <ul class="footer-links">
-          <li><a href=""> </a></li>
-          
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  
-     
-  
+    
 </footer>
-  </div>
-  </div>
-  </div>
-  </div>
+<div class="footer-copyright text-center py-3 bckWht">
+      All Rights Reserved © 2016 | <a class="black" href="pp.php">Privacy Policy</a> | <a class="black" href="tos.php">Terms of Service</a>
+    </div>
+  
+  
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
