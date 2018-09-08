@@ -1,13 +1,13 @@
 <?php
 
-//fetch_comment.php
+    //fetch_comment.php
 
-include('./connection.php');
+    include('./connection.php');
 
-$classID = $_GET['classID'];
+    $classID = $_GET['classID'];
 
-// Query the database for all comments that have a class_id of $classID
+    // Query the database for all comments that have a class_id of $classID
 
-// echo json_encode($array)
+    // echo json_encode($array)
 
 ?>

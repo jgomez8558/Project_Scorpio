@@ -1,112 +1,121 @@
 #background {
-    position: static;
-    width: 100vw;
-    height: 175px;
-    object-fit: cover;
+            position: static;
+            width: 100vw;
+            height: 175px;
+            object-fit: cover;
 }
+
 #user {
-    position: absolute;
-    border: 2px solid #f6f6f6;
-    border-radius: 50%;
-    top: 115px;
-    left: 60px;
-    width: 125px;
-    height: 125px;
+            position: absolute;
+            border: 2px solid #f6f6f6;
+            border-radius: 50%;
+            top: 115px;
+            left: 60px;
+            width: 125px;
+            height: 125px;
 }
+
 .name {
-    padding-left: 180px;
-    padding-top: 10px;
+            padding-left: 180px;
+            padding-top: 10px;
 }
+
 .classes {
-    border-radius: 0%;
-    margin-top: 60px;
-    margin-left: 50px;
-    margin-right: 50px;
+            border-radius: 0%;
+            margin-top: 60px;
+            margin-left: 50px;
+            margin-right: 50px;
 }
+
 .about {
-    border-radius: 0%;
-    margin-top: 60px;
-    margin-left: 50px;
-    margin-right: 50px;
+            border-radius: 0%;
+            margin-top: 60px;
+            margin-left: 50px;
+            margin-right: 50px;
 }
+
 .cancel {
-    margin-left: 30px
+            margin-left: 30px
 }
+
 .save {
-    float: right;
-    margin-right: 30px;
+            float: right;
+            margin-right: 30px;
 }
+
 .edit{
-    position: absolute;
-    top: 10px;
-    right: 30px;
-    font-size: 2em;
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            font-size: 2em;
 }
+
 .delete {
-    background-color: red!important;
+            background-color: red!important;
 }
+
 .card {
-    background-color: #f6f6f6;
+            background-color: #f6f6f6;
 }
 
 input[type=button], input[type=submit], input[type=reset]  {
-    background-color: #56baed;
-    border: none;
-    color: white;
-    padding: 10px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 13px;
-    -webkit-box-shadow: 0 10px 30px 0 rgba(105, 105, 105, 0.4);
-    box-shadow: 0 10px 30px 0 rgba(105, 105, 105,0.4);
-    -webkit-border-radius: 5px 5px 5px 5px;
-    border-radius: 5px 5px 5px 5px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-  }
+            background-color: #56baed;
+            border: none;
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 13px;
+            -webkit-box-shadow: 0 10px 30px 0 rgba(105, 105, 105, 0.4);
+            box-shadow: 0 10px 30px 0 rgba(105, 105, 105,0.4);
+            -webkit-border-radius: 5px 5px 5px 5px;
+            border-radius: 5px 5px 5px 5px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+}
   
-  input[type=button]:hover, input[type=submit]:hover, {
-    background-color: #39ace7;
-  }
+input[type=button]:hover, input[type=submit]:hover, {
+            background-color: #39ace7;
+}
   
-  input[type=button]:active, input[type=submit]:active, {
-    -moz-transform: scale(0.95);
-    -webkit-transform: scale(0.95);
-    -o-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    transform: scale(0.95);
-  }
+input[type=button]:active, input[type=submit]:active, {
+            -moz-transform: scale(0.95);
+            -webkit-transform: scale(0.95);
+            -o-transform: scale(0.95);
+            -ms-transform: scale(0.95);
+            transform: scale(0.95);
+}
   
-  input[type=text] {
-    background-color: white;
-    border: none;
-    color: #0d0d0d;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    width: 85%;
-    border: 2px solid #f6f6f6;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    -webkit-border-radius: 5px 5px 5px 5px;
-    border-radius: 5px 5px 5px 5px;
-  }
+input[type=text] {
+            background-color: white;
+            border: none;
+            color: #0d0d0d;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            width: 85%;
+            border: 2px solid #f6f6f6;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            -webkit-border-radius: 5px 5px 5px 5px;
+            border-radius: 5px 5px 5px 5px;
+}
   
-  input[type=text]:focus {
-    background-color: #fff;
-    border-bottom: 2px solid #5fbae9;
-  }
+input[type=text]:focus {
+            background-color: #fff;
+            border-bottom: 2px solid #5fbae9;
+}
   
-  input[type=text]:placeholder {
-    color: #cccccc;
-  }
+input[type=text]:placeholder {
+            color: #cccccc;
+}
