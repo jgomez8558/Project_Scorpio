@@ -1,11 +1,19 @@
 <?php
-include('authlogin.php');
 
-include('connection.php');
+    // Checks if user is login correctly
+    include('authlogin.php');
 
-$tempId = (string)$_SESSION['id'];
-$classId = $_REQUEST['classId'];
-$query = "DELETE FROM register WHERE userId= $tempId AND classId= $classId";
-$result = mysqli_query($link, $query) or die ( mysql_error());
-header("Location: setting.php");
+    // Connects to database
+    include('connection.php');
+
+    $tempId = (string)$_SESSION['id'];
+    $classId = $_REQUEST['classId'];
+
+    // Deletes register class from database
+    $query = "DELETE FROM register WHERE userId= $tempId AND classId= $classId";
+    $result = mysqli_query($link, $query) or die ( mysql_error());
+
+    // Navigates back to setting page
+    header("Location: setting.php");
+    
 ?>
