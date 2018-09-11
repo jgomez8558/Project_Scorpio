@@ -1,45 +1,37 @@
 #body {
- 
-  background-image: url(/braintrendy/assets/background.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-    
-    
+      background-image: url(/braintrendy/assets/background.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;   
 }
 
-
-
 html {
-  background-color: #fefefe;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
+      background-color: #fefefe;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
 }
 
 .container {
-  margin-top: 40px !important; 
-
+      margin-top: 40px !important; 
 }
 
 .card-body{
-  height: 225px;
-  text-align: center;
-  font-weight: 250; 
-  background-color: #5a74e7;
-   
+      height: 225px;
+      text-align: center;
+      font-weight: 250; 
+      background-color: #5a74e7;
 }
 
 nav {
-  font-size: 20px;
+      font-size: 20px;
 }
 
 .btn {
-  
-  float: right;
-
+      float: right;
 }
+
 .jumbotron {
-  background: #27cc0a;
+      background: #27cc0a;
 }
 

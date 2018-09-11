@@ -1,5 +1,3 @@
-
-
 TweenMax.set("img",{xPercent:"-50%",yPercent:"-50%"})
 
 var total = 70 , dotmagic = document.getElementById('dotmagic') ,
